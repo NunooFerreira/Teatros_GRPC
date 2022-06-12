@@ -63,9 +63,29 @@ namespace AdminGrpc.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Espetaculo {
+            get {
+                object obj = ResourceManager.GetObject("Espetaculo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SD {
             get {
                 object obj = ResourceManager.GetObject("SD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sessaolista {
+            get {
+                object obj = ResourceManager.GetObject("sessaolista", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
