@@ -14,6 +14,8 @@ namespace AdminGrpc
         [STAThread]
         static void Main()
         {
+
+            // TESTE GITHUB Nuno
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
