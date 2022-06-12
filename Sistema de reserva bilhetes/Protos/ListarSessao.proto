@@ -1,0 +1,26 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+
+service ListarSessao{
+	rpc GetListarSessao (ListarSessaoVerModelo) returns (stream ListarSessaoModelo);
+	rpc PesquisaListaSessao(PesquisaListaSessaoVerModelo) returns (ListarSessaoModelo);
+}
+
+message PesquisaListaSessaoVerModelo{
+	string sessao = 1;
+}
+
+message ListarSessaoVerModelo{
+
+}
+
+message ListarSessaoModelo{
+	string nome_sessao = 1;
+	string datasessao = 2;
+	string horainicio = 3;
+	string horafim = 4;
+	int32 lugares_totais = 5;
+	int32 lugares_disponiveis = 6;
+}

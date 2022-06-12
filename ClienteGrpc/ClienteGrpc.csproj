@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.21.1" />
+    <PackageReference Include="Grpc.Core" Version="2.46.3" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.46.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Login.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\AdicionarTeatro.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Espetaculo.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Sessao.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\RegistaEspetaculo.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Compra.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\TipoUtilizador.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Utilizador.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Reserva.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Fundos.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\AnularCompra.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\CarregarRegisto.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Clientes.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\ListarUtilizadores.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\ListarTeatros.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\ListarSessao.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\ListarReserva.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\ListarEspetaculo.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\ListarCompraBilhete.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+</Project>

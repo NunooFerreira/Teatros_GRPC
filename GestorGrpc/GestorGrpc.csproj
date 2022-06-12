@@ -1,0 +1,92 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Protos\AdicionarTeatro.proto" />
+    <None Remove="Protos\AnularCompra.proto" />
+    <None Remove="Protos\CarregarRegisto.proto" />
+    <None Remove="Protos\Clientes.proto" />
+    <None Remove="Protos\Compra.proto" />
+    <None Remove="Protos\Espetaculo.proto" />
+    <None Remove="Protos\Fundos.proto" />
+    <None Remove="Protos\greet.proto" />
+    <None Remove="Protos\ListarCompraBilhete.proto" />
+    <None Remove="Protos\ListarEspetaculo.proto" />
+    <None Remove="Protos\ListarReserva.proto" />
+    <None Remove="Protos\ListarSessao.proto" />
+    <None Remove="Protos\ListarTeatros.proto" />
+    <None Remove="Protos\ListarUtilizadores.proto" />
+    <None Remove="Protos\Login.proto" />
+    <None Remove="Protos\RegistaEspetaculo.proto" />
+    <None Remove="Protos\Reserva.proto" />
+    <None Remove="Protos\Sessao.proto" />
+    <None Remove="Protos\TipoUtilizador.proto" />
+    <None Remove="Protos\Utilizador.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.21.1" />
+    <PackageReference Include="Grpc.Core" Version="2.46.3" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.46.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\AdicionarTeatro.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\AnularCompra.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\CarregarRegisto.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Clientes.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Compra.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Espetaculo.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\Fundos.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\greet.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\ListarCompraBilhete.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\ListarEspetaculo.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\ListarReserva.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\ListarSessao.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\ListarTeatros.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\ListarUtilizadores.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\Login.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\RegistaEspetaculo.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\Reserva.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\Sessao.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\TipoUtilizador.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+    <Protobuf Include="Protos\Utilizador.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,37 @@
+﻿syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+service AdicionarEspetaculo {
+
+	rpc GetNovoEspetaculo (EspetaculoVerModelo) returns (EspetaculoModelo);
+	rpc PesquisaEspetaculo (EspetaculoVerModeloPesquisa) returns (EspetaculoModeloPesquisa);
+}
+
+message EspetaculoVerModelo{
+	string nome = 1;
+	string sinopse = 2;
+	string data_inicio = 3;
+	string data_fim = 4;
+	int32 dinheiro = 5;
+	
+}
+
+message EspetaculoModelo{
+	string feedback = 1;
+}
+
+
+message EspetaculoVerModeloPesquisa{
+	string nome = 1;	
+}
+
+message EspetaculoModeloPesquisa{
+	string nome = 1;
+	string sinopse = 2;
+	string data_inicio = 3;
+	string data_fim = 4;
+	float dinheiro = 5;
+	
+}

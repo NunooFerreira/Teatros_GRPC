@@ -1,0 +1,69 @@
+//defina o esquema 
+syntax = "proto3";
+import "google/protobuf/duration.proto";  
+import "google/protobuf/timestamp.proto";
+
+
+
+//definir namespace baseado na nossa aplicação
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+
+
+
+// The greeting service definition.
+//podemos pensar no serviço como uma classe
+service Greeter {
+
+}
+
+message TeatroModel
+{
+	int32 TeatroId = 1; 
+	string Nome = 2;
+	string Localizacao = 3;
+	string Morada = 4;
+	ContatoModel contatos = 5;
+	
+}
+
+message SessaoModel
+{
+	int32 SessaoId = 1;
+	int32 total_lugares = 2;
+	int32 lugares_restantes = 3;
+	google.protobuf.Timestamp datasessao = 4;
+	string hora_i = 5;
+	string hora_f = 6;
+	int32 EspetaculoID = 7;
+	EspetaculoModel Espetaculos = 8;
+}
+
+message EspetaculoModel
+{
+	int32 EspetaculoID = 1;
+	string nome = 2;
+	string sinopse = 3;
+	float preco = 4;
+	google.protobuf.Timestamp data_i = 5;
+	google.protobuf.Timestamp data_f = 6;
+	int32 TeatroId = 7;
+	TeatroModel teatros = 8;
+	repeated SessaoModel sessoes = 9;
+}
+
+message ContatoModel
+{
+	int32 ContatoId = 1;
+	string email = 2; 
+	int32 telefone = 3;
+}
+message UserModel{
+	string email = 1;
+	int32 userId = 2; 
+}
+
+message UserKeyModel{
+	string email = 1;
+	string keyString = 2;
+}
+

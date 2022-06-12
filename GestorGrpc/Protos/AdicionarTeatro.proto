@@ -1,0 +1,35 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+
+package greet;
+
+service AdicionarTeatro {
+	rpc GetNewTeatro (TeatroVerModelo) returns (TeatroModelo);
+	rpc PesquisaTeatro (TeatroVerModeloPesquisa) returns (TeatroModeloPesquisa);
+}
+
+message TeatroVerModelo{
+	string nome = 1;
+	string morada_teatro = 2;
+	string localizacao_teatro = 3;
+	int32 telemovel = 4;
+	int32 telefone = 5;
+	string email = 6;
+}
+
+message TeatroModelo{
+	string feedback = 1;
+}
+
+message TeatroVerModeloPesquisa{
+	string nome = 1;
+}
+
+message TeatroModeloPesquisa{
+	string nome = 1;
+	string morada_teatro = 2;
+	string localizacao_teatro = 3;
+	int32 telemovel = 4;
+	int32 telefone = 5;
+	string email = 6;
+}

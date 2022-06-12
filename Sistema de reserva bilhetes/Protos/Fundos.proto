@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+service AdicionarFundos{
+	rpc GetAdicionarFundos(FundosVerModelo) returns (FundosModelo);
+}
+
+
+message FundosVerModelo{
+	int32 idutil = 1;
+	int32 fundo = 2;
+}
+
+message FundosModelo{
+	string feedback = 1;
+}

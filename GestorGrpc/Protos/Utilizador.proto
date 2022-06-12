@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+
+package greet;
+
+service CriarUtilizador{
+	rpc GetUtilizadorInfo(UtilizadorVerModelo) returns (UtilizadorModelo);
+}
+
+message UtilizadorVerModelo{
+	string username = 1;
+	string pass = 2;
+	string nome = 3;
+	string nif = 4;
+	int32 idade = 5;
+	string localidade = 6;
+	int32 tipoutilizador = 7;
+}
+
+message UtilizadorModelo{
+	string feedback = 1;
+}

@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+service ListarReserva {
+	rpc GetListaReserva (ListarReservaVerModelo) returns (stream ListarReservaModelo);
+}
+
+message ListarReservaVerModelo{
+
+}
+
+message ListarReservaModelo{
+	string res_teatro = 1;
+	string res_sessao = 2;
+	string res_espetaculo = 3;
+	int32 quantidade = 4;
+	string data = 5;
+
+}

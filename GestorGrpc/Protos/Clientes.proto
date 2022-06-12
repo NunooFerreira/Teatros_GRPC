@@ -1,0 +1,25 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+service Clientes{
+	rpc GetClienteInfo (ClienteVerModelo) returns (ClientesModelo);
+	rpc GetNovosClientes(ClientesRequest) returns (stream ClientesModelo);
+}
+
+message ClientesRequest{
+
+}
+
+message ClienteVerModelo{
+	int32 userId = 1;
+}
+
+
+message ClientesModelo{
+	string firstname = 1;
+	string lastName = 2;
+	string email = 3;
+	bool isAlive = 4;
+	int32 age = 5;
+}

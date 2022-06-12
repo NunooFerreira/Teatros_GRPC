@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.21.1" />
+    <PackageReference Include="Grpc.Core" Version="2.46.3" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.40.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.46.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\AnularCompra.proto" GrpcServices="Client">
+      <Link>Protos\AnularCompra.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\CarregarRegisto.proto" GrpcServices="Client">
+      <Link>Protos\CarregarRegisto.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\Clientes.proto" GrpcServices="Client">
+      <Link>Protos\Clientes.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\Compra.proto" GrpcServices="Client">
+      <Link>Protos\Compra.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\Espetaculo.proto" GrpcServices="Client">
+      <Link>Protos\Espetaculo.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\Fundos.proto" GrpcServices="Client">
+      <Link>Protos\Fundos.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\ListarCompraBilhete.proto" GrpcServices="Client">
+      <Link>Protos\ListarCompraBilhete.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\ListarEspetaculo.proto" GrpcServices="Client">
+      <Link>Protos\ListarEspetaculo.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\ListarReserva.proto" GrpcServices="Client">
+      <Link>Protos\ListarReserva.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\ListarSessao.proto" GrpcServices="Client">
+      <Link>Protos\ListarSessao.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\ListarTeatros.proto" GrpcServices="Client">
+      <Link>Protos\ListarTeatros.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\ListarUtilizadores.proto" GrpcServices="Client">
+      <Link>Protos\ListarUtilizadores.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\Login.proto" GrpcServices="Client">
+      <Link>Protos\Login.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\RegistaEspetaculo.proto" GrpcServices="Client">
+      <Link>Protos\RegistaEspetaculo.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\Reserva.proto" GrpcServices="Client">
+      <Link>Protos\Reserva.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\Sessao.proto" GrpcServices="Client">
+      <Link>Protos\Sessao.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\TipoUtilizador.proto" GrpcServices="Client">
+      <Link>Protos\TipoUtilizador.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\Utilizador.proto" GrpcServices="Client">
+      <Link>Protos\Utilizador.proto</Link>
+    </Protobuf>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+</Project>

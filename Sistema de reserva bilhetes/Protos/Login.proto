@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+
+service CriarLogin{
+	rpc GetLogin (ModeloLogin) returns (CriarModeloLogin);
+
+}
+
+message ModeloLogin{
+	string user = 1;
+	string password = 2;
+
+}
+
+message CriarModeloLogin{
+	int32 sucesso = 1;
+	int32 utilizador_tipo = 2;
+	string feedback = 3;
+}

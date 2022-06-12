@@ -1,0 +1,26 @@
+//defina o esquema 
+syntax = "proto3";
+
+//definir namespace baseado na nossa aplicação
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+
+
+
+// The greeting service definition.
+//podemos pensar no serviço como uma classe
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  // Sends a greeting
+  rpc SayHelloAgain (HelloRequest) returns (HelloReply);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
