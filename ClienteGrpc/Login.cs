@@ -19,8 +19,18 @@ namespace ClienteGrpc
 
         private void btnentrar_Click(object sender, EventArgs e)
         {
+            // Depois da verificacao do Login.
+            this.Hide();
+
             InicioCliente inicioCliente = new InicioCliente();
             inicioCliente.ShowDialog();
+           
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            RegistarUtilizador registarUtilizador = new RegistarUtilizador();  
+            registarUtilizador.ShowDialog();
         }
     }
 }

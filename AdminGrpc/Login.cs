@@ -20,8 +20,14 @@ namespace AdminGrpc
 
         private void btnentrar_Click(object sender, EventArgs e)
         {
+
+            // Depois da verificacao do Login.
+            this.Hide();
+
             InicioAdmin inicioAdmin = new InicioAdmin();
             inicioAdmin.ShowDialog();
+
+            
 
         }
 

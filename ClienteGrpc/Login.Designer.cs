@@ -103,6 +103,7 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Criar uma nova conta";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
