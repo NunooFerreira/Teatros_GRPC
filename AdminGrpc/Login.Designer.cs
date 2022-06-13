@@ -37,6 +37,7 @@
             this.btnentrar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.LabelAdmin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -114,11 +115,22 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Criar uma nova conta";
             // 
+            // LabelAdmin
+            // 
+            this.LabelAdmin.AutoSize = true;
+            this.LabelAdmin.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LabelAdmin.Location = new System.Drawing.Point(330, 9);
+            this.LabelAdmin.Name = "LabelAdmin";
+            this.LabelAdmin.Size = new System.Drawing.Size(120, 45);
+            this.LabelAdmin.TabIndex = 18;
+            this.LabelAdmin.Text = "Admin";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LabelAdmin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnentrar);
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Button btnentrar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LabelAdmin;
     }
 }

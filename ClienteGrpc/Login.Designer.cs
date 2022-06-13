@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.LabelCliente = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnentrar
@@ -114,11 +115,22 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Esqueci-me da Password";
             // 
+            // LabelCliente
+            // 
+            this.LabelCliente.AutoSize = true;
+            this.LabelCliente.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LabelCliente.Location = new System.Drawing.Point(347, 9);
+            this.LabelCliente.Name = "LabelCliente";
+            this.LabelCliente.Size = new System.Drawing.Size(123, 45);
+            this.LabelCliente.TabIndex = 18;
+            this.LabelCliente.Text = "Cliente";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LabelCliente);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LabelCliente;
     }
 }
