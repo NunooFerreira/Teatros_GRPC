@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace ClienteGrpc
 {
-    public partial class InicioCliente : Form
+    public partial class VerB : Form
     {
-        public InicioCliente()
+        public VerB()
         {
             InitializeComponent();
         }
-
-   
     }
 }

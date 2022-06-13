@@ -37,11 +37,12 @@
             this.btnpesquisarsessoes = new System.Windows.Forms.Button();
             this.btnanularcompra = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btncomprarbilhetes
             // 
-            this.btncomprarbilhetes.Location = new System.Drawing.Point(159, 131);
+            this.btncomprarbilhetes.Location = new System.Drawing.Point(246, 251);
             this.btncomprarbilhetes.Name = "btncomprarbilhetes";
             this.btncomprarbilhetes.Size = new System.Drawing.Size(115, 23);
             this.btncomprarbilhetes.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             // btnadicionarfundos
             // 
-            this.btnadicionarfundos.Location = new System.Drawing.Point(159, 160);
+            this.btnadicionarfundos.Location = new System.Drawing.Point(246, 280);
             this.btnadicionarfundos.Name = "btnadicionarfundos";
             this.btnadicionarfundos.Size = new System.Drawing.Size(115, 23);
             this.btnadicionarfundos.TabIndex = 1;
@@ -59,7 +60,7 @@
             // 
             // btnbilhetescomprados
             // 
-            this.btnbilhetescomprados.Location = new System.Drawing.Point(159, 189);
+            this.btnbilhetescomprados.Location = new System.Drawing.Point(246, 309);
             this.btnbilhetescomprados.Name = "btnbilhetescomprados";
             this.btnbilhetescomprados.Size = new System.Drawing.Size(115, 23);
             this.btnbilhetescomprados.TabIndex = 2;
@@ -68,7 +69,7 @@
             // 
             // btnpesquisarteatros
             // 
-            this.btnpesquisarteatros.Location = new System.Drawing.Point(482, 143);
+            this.btnpesquisarteatros.Location = new System.Drawing.Point(461, 251);
             this.btnpesquisarteatros.Name = "btnpesquisarteatros";
             this.btnpesquisarteatros.Size = new System.Drawing.Size(140, 23);
             this.btnpesquisarteatros.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             // btnpesquisarespetaculos
             // 
-            this.btnpesquisarespetaculos.Location = new System.Drawing.Point(482, 198);
+            this.btnpesquisarespetaculos.Location = new System.Drawing.Point(461, 306);
             this.btnpesquisarespetaculos.Name = "btnpesquisarespetaculos";
             this.btnpesquisarespetaculos.Size = new System.Drawing.Size(140, 23);
             this.btnpesquisarespetaculos.TabIndex = 4;
@@ -86,7 +87,7 @@
             // 
             // btnsair
             // 
-            this.btnsair.Location = new System.Drawing.Point(346, 396);
+            this.btnsair.Location = new System.Drawing.Point(387, 415);
             this.btnsair.Name = "btnsair";
             this.btnsair.Size = new System.Drawing.Size(75, 23);
             this.btnsair.TabIndex = 5;
@@ -95,7 +96,7 @@
             // 
             // btnpesquisarsessoes
             // 
-            this.btnpesquisarsessoes.Location = new System.Drawing.Point(482, 172);
+            this.btnpesquisarsessoes.Location = new System.Drawing.Point(461, 280);
             this.btnpesquisarsessoes.Name = "btnpesquisarsessoes";
             this.btnpesquisarsessoes.Size = new System.Drawing.Size(140, 23);
             this.btnpesquisarsessoes.TabIndex = 6;
@@ -104,7 +105,7 @@
             // 
             // btnanularcompra
             // 
-            this.btnanularcompra.Location = new System.Drawing.Point(159, 218);
+            this.btnanularcompra.Location = new System.Drawing.Point(246, 338);
             this.btnanularcompra.Name = "btnanularcompra";
             this.btnanularcompra.Size = new System.Drawing.Size(115, 23);
             this.btnanularcompra.TabIndex = 7;
@@ -114,19 +115,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(505, 110);
+            this.label1.ForeColor = System.Drawing.Color.IndianRed;
+            this.label1.Location = new System.Drawing.Point(484, 206);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 30);
             this.label1.TabIndex = 8;
             this.label1.Text = "Pesquisa";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.IndianRed;
+            this.label2.Location = new System.Drawing.Point(270, 206);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 30);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Ações";
             // 
             // InicioCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackgroundImage = global::ClienteGrpc.Properties.Resources.sistemasdistribuidos;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnanularcompra);
             this.Controls.Add(this.btnpesquisarsessoes);
@@ -154,5 +171,6 @@
         private System.Windows.Forms.Button btnpesquisarsessoes;
         private System.Windows.Forms.Button btnanularcompra;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace ClienteGrpc
 {
-    public partial class InicioCliente : Form
+    public partial class ComprarB : Form
     {
-        public InicioCliente()
+        public ComprarB()
         {
             InitializeComponent();
         }
-
-   
     }
 }

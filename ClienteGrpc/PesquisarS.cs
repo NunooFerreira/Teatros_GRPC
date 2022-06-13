@@ -8,21 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AdminGrpc
+namespace ClienteGrpc
 {
-    public partial class Form1 : Form
+    public partial class PesquisarS : Form
     {
-        public Form1()
+        public PesquisarS()
         {
             InitializeComponent();
-        }
-
-
-        private void btnentrar_Click(object sender, EventArgs e)
-        {
-            InicioAdmin inicioAdmin = new InicioAdmin();
-            inicioAdmin.ShowDialog();
-
         }
     }
 }

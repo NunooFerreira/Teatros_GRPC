@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace ClienteGrpc
 {
-    public partial class Form1 : Form
+    public partial class PesquisarE : Form
     {
-        public Form1()
+        public PesquisarE()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -10,13 +10,17 @@ using System.Windows.Forms;
 
 namespace ClienteGrpc
 {
-    public partial class InicioCliente : Form
+    public partial class Login : Form
     {
-        public InicioCliente()
+        public Login()
         {
             InitializeComponent();
         }
 
-   
+        private void btnentrar_Click(object sender, EventArgs e)
+        {
+            InicioCliente inicioCliente = new InicioCliente();
+            inicioCliente.ShowDialog();
+        }
     }
 }

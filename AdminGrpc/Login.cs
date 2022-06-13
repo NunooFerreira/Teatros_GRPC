@@ -8,15 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClienteGrpc
+namespace AdminGrpc
 {
-    public partial class InicioCliente : Form
+    public partial class Login : Form
     {
-        public InicioCliente()
+        public Login()
         {
             InitializeComponent();
         }
 
-   
+
+        private void btnentrar_Click(object sender, EventArgs e)
+        {
+            InicioAdmin inicioAdmin = new InicioAdmin();
+            inicioAdmin.ShowDialog();
+
+        }
+
+    
     }
 }
