@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace GestorGrpc
 {
-    public partial class Login : Form
+    public partial class ListarTgestor : Form
     {
-        public Login()
+        public ListarTgestor()
         {
             InitializeComponent();
         }
 
-        private void btnlogin_Click(object sender, EventArgs e)
+        private void btncancelar_Click(object sender, EventArgs e)
         {
-            InicioGestor inicioGestor = new InicioGestor(); 
-            inicioGestor.Show();
-
+            this.Close();
         }
     }
 }
