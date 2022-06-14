@@ -62,5 +62,10 @@ namespace AdminGrpc
             AdicionarT adicionarT = new AdicionarT();
             adicionarT.ShowDialog();
         }
+
+        private void btnvoltar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

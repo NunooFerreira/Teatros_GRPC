@@ -16,5 +16,10 @@ namespace ClienteGrpc
         {
             InitializeComponent();
         }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

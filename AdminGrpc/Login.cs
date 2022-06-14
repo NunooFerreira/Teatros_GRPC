@@ -27,7 +27,6 @@ namespace AdminGrpc
             InicioAdmin inicioAdmin = new InicioAdmin();
             inicioAdmin.ShowDialog();
 
-            
 
         }
 

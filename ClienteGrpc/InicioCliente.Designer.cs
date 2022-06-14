@@ -66,6 +66,7 @@
             this.btnbilhetescomprados.TabIndex = 2;
             this.btnbilhetescomprados.Text = "Bilhetes Comprados";
             this.btnbilhetescomprados.UseVisualStyleBackColor = true;
+            this.btnbilhetescomprados.Click += new System.EventHandler(this.btnbilhetescomprados_Click);
             // 
             // btnpesquisarteatros
             // 

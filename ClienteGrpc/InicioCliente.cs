@@ -17,6 +17,10 @@ namespace ClienteGrpc
             InitializeComponent();
         }
 
-   
+        private void btnbilhetescomprados_Click(object sender, EventArgs e)
+        {
+            VerB verB = new VerB();
+            verB.ShowDialog();
+        }
     }
 }
