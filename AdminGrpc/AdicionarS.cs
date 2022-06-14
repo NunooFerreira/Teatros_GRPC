@@ -35,7 +35,7 @@ namespace AdminGrpc
                 NomeSessao = tbnome.Text,
                 HoraInicio = tbhorai.Text,
                 HoraFim = tbhoraf.Text,
-                DataSessao = Convert.ToString(dtpsessao),
+                DataSessao = dtpsessao.Value.ToShortDateString(),
                 LugarTotal = Convert.ToInt32(tblugart.Text),
                 LugarDisponivel = Convert.ToInt32(tblugard.Text)
             };

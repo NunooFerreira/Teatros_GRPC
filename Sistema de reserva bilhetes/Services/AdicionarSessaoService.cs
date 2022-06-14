@@ -38,7 +38,7 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context.SaveChangesAsync();
             return Task.FromResult(new SessaoModelo
             {
-                Feedback = "Teatro adicionado com Sucesso!"
+                Feedback = "Sessao adicionada com Sucesso!"
             });
 
 
@@ -49,7 +49,6 @@ namespace Sistema_de_reserva_bilhetes.Services
         public override Task<SessaoModeloUpdate> UpdateSessao(SessaoVerModeloUpdate request, ServerCallContext context)
         {
 
-            // vai percorrer a tabela sessão e encontrar a sessão com o mesmo nome
             var uti = new Sessao();
             foreach (var i in _context.Sessaos)
             {
