@@ -37,33 +37,36 @@
             // 
             this.lblistare.FormattingEnabled = true;
             this.lblistare.ItemHeight = 15;
-            this.lblistare.Location = new System.Drawing.Point(63, 67);
+            this.lblistare.Location = new System.Drawing.Point(125, 88);
             this.lblistare.Name = "lblistare";
-            this.lblistare.Size = new System.Drawing.Size(410, 154);
+            this.lblistare.Size = new System.Drawing.Size(556, 169);
             this.lblistare.TabIndex = 0;
             // 
             // btnadicionar
             // 
-            this.btnadicionar.Location = new System.Drawing.Point(119, 263);
+            this.btnadicionar.Location = new System.Drawing.Point(324, 286);
             this.btnadicionar.Name = "btnadicionar";
             this.btnadicionar.Size = new System.Drawing.Size(75, 23);
             this.btnadicionar.TabIndex = 1;
             this.btnadicionar.Text = "Adicionar";
             this.btnadicionar.UseVisualStyleBackColor = true;
+            this.btnadicionar.Click += new System.EventHandler(this.btnadicionar_Click);
             // 
             // btnvoltar
             // 
-            this.btnvoltar.Location = new System.Drawing.Point(264, 266);
+            this.btnvoltar.Location = new System.Drawing.Point(420, 286);
             this.btnvoltar.Name = "btnvoltar";
             this.btnvoltar.Size = new System.Drawing.Size(75, 23);
             this.btnvoltar.TabIndex = 2;
             this.btnvoltar.Text = "Voltar";
             this.btnvoltar.UseVisualStyleBackColor = true;
+            this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
             // 
             // ListarE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::AdminGrpc.Properties.Resources.espetaculolista;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnvoltar);
             this.Controls.Add(this.btnadicionar);

@@ -28,5 +28,40 @@ namespace ClienteGrpc
             AdicionarF adicionarF = new AdicionarF();
             adicionarF.ShowDialog();
         }
+
+        private void btncomprarbilhetes_Click(object sender, EventArgs e)
+        {
+            ComprarB comprarB = new ComprarB();
+            comprarB.ShowDialog();
+        }
+
+        private void btnanularcompra_Click(object sender, EventArgs e)
+        {
+            AnularC anularC = new AnularC();
+            anularC.ShowDialog();
+        }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnpesquisarteatros_Click(object sender, EventArgs e)
+        {
+            PesquisarT pesquisarT = new PesquisarT();
+            pesquisarT.ShowDialog();
+        }
+
+        private void btnpesquisarsessoes_Click(object sender, EventArgs e)
+        {
+            PesquisarS pesquisarS = new PesquisarS();
+            pesquisarS.ShowDialog();
+        }
+
+        private void btnpesquisarespetaculos_Click(object sender, EventArgs e)
+        {
+            PesquisarE pesquisarE = new PesquisarE();
+            pesquisarE.ShowDialog();
+        }
     }
 }

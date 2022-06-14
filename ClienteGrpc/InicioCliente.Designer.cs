@@ -48,6 +48,7 @@
             this.btncomprarbilhetes.TabIndex = 0;
             this.btncomprarbilhetes.Text = "Comprar Bilhetes";
             this.btncomprarbilhetes.UseVisualStyleBackColor = true;
+            this.btncomprarbilhetes.Click += new System.EventHandler(this.btncomprarbilhetes_Click);
             // 
             // btnadicionarfundos
             // 
@@ -77,6 +78,7 @@
             this.btnpesquisarteatros.TabIndex = 3;
             this.btnpesquisarteatros.Text = "Pesquisar Teatros";
             this.btnpesquisarteatros.UseVisualStyleBackColor = true;
+            this.btnpesquisarteatros.Click += new System.EventHandler(this.btnpesquisarteatros_Click);
             // 
             // btnpesquisarespetaculos
             // 
@@ -86,6 +88,7 @@
             this.btnpesquisarespetaculos.TabIndex = 4;
             this.btnpesquisarespetaculos.Text = "Pesquisar Espetáculos";
             this.btnpesquisarespetaculos.UseVisualStyleBackColor = true;
+            this.btnpesquisarespetaculos.Click += new System.EventHandler(this.btnpesquisarespetaculos_Click);
             // 
             // btnsair
             // 
@@ -95,6 +98,7 @@
             this.btnsair.TabIndex = 5;
             this.btnsair.Text = "Sair";
             this.btnsair.UseVisualStyleBackColor = true;
+            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
             // 
             // btnpesquisarsessoes
             // 
@@ -104,6 +108,7 @@
             this.btnpesquisarsessoes.TabIndex = 6;
             this.btnpesquisarsessoes.Text = "Pesquisar Sessões";
             this.btnpesquisarsessoes.UseVisualStyleBackColor = true;
+            this.btnpesquisarsessoes.Click += new System.EventHandler(this.btnpesquisarsessoes_Click);
             // 
             // btnanularcompra
             // 
@@ -113,6 +118,7 @@
             this.btnanularcompra.TabIndex = 7;
             this.btnanularcompra.Text = "Anular Compra";
             this.btnanularcompra.UseVisualStyleBackColor = true;
+            this.btnanularcompra.Click += new System.EventHandler(this.btnanularcompra_Click);
             // 
             // label1
             // 

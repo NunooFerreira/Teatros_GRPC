@@ -75,6 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GestorGrpc.Properties.Resources.espetaculolista;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btncancelarE);
             this.Controls.Add(this.btnalterarE);

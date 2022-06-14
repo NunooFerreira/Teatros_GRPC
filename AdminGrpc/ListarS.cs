@@ -22,5 +22,10 @@ namespace AdminGrpc
             AdicionarS adicionarS = new AdicionarS();
             adicionarS.ShowDialog();
         }
+
+        private void btnvoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

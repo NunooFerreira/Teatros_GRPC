@@ -38,8 +38,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(105, 32);
+            this.label1.Location = new System.Drawing.Point(231, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(370, 40);
             this.label1.TabIndex = 0;
@@ -48,7 +49,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 120);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(271, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 1;
@@ -56,14 +58,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 148);
+            this.textBox1.Location = new System.Drawing.Point(347, 156);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 23);
             this.textBox1.TabIndex = 2;
             // 
             // btnadicionar
             // 
-            this.btnadicionar.Location = new System.Drawing.Point(134, 223);
+            this.btnadicionar.Location = new System.Drawing.Point(259, 277);
             this.btnadicionar.Name = "btnadicionar";
             this.btnadicionar.Size = new System.Drawing.Size(120, 34);
             this.btnadicionar.TabIndex = 3;
@@ -72,7 +74,7 @@
             // 
             // btncancelar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(311, 223);
+            this.btncancelar.Location = new System.Drawing.Point(436, 277);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(120, 34);
             this.btncancelar.TabIndex = 4;
@@ -84,7 +86,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 321);
+            this.BackgroundImage = global::ClienteGrpc.Properties.Resources.adicionar_fundos;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnadicionar);
             this.Controls.Add(this.textBox1);

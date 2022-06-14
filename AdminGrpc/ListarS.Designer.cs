@@ -37,14 +37,14 @@
             // 
             this.lbSessoes.FormattingEnabled = true;
             this.lbSessoes.ItemHeight = 15;
-            this.lbSessoes.Location = new System.Drawing.Point(109, 72);
+            this.lbSessoes.Location = new System.Drawing.Point(109, 57);
             this.lbSessoes.Name = "lbSessoes";
-            this.lbSessoes.Size = new System.Drawing.Size(198, 154);
+            this.lbSessoes.Size = new System.Drawing.Size(558, 169);
             this.lbSessoes.TabIndex = 0;
             // 
             // btnadicionar
             // 
-            this.btnadicionar.Location = new System.Drawing.Point(109, 255);
+            this.btnadicionar.Location = new System.Drawing.Point(308, 249);
             this.btnadicionar.Name = "btnadicionar";
             this.btnadicionar.Size = new System.Drawing.Size(75, 23);
             this.btnadicionar.TabIndex = 1;
@@ -54,12 +54,13 @@
             // 
             // btnvoltar
             // 
-            this.btnvoltar.Location = new System.Drawing.Point(207, 255);
+            this.btnvoltar.Location = new System.Drawing.Point(406, 249);
             this.btnvoltar.Name = "btnvoltar";
             this.btnvoltar.Size = new System.Drawing.Size(75, 23);
             this.btnvoltar.TabIndex = 2;
             this.btnvoltar.Text = "Voltar";
             this.btnvoltar.UseVisualStyleBackColor = true;
+            this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
             // 
             // ListarS
             // 

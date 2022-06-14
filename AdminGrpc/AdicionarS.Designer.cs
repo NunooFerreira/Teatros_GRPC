@@ -48,16 +48,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(324, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 25);
+            this.label1.Size = new System.Drawing.Size(162, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Adicionar Sessao";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label2.Location = new System.Drawing.Point(37, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 15);
@@ -67,6 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label3.Location = new System.Drawing.Point(37, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 15);
@@ -76,6 +79,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label4.Location = new System.Drawing.Point(37, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 15);
@@ -85,6 +89,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label5.Location = new System.Drawing.Point(37, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 15);
@@ -94,6 +99,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label6.Location = new System.Drawing.Point(37, 255);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 15);
@@ -103,6 +109,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label7.Location = new System.Drawing.Point(37, 296);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 15);
@@ -111,14 +118,14 @@
             // 
             // dtpsessao
             // 
-            this.dtpsessao.Location = new System.Drawing.Point(123, 131);
+            this.dtpsessao.Location = new System.Drawing.Point(154, 131);
             this.dtpsessao.Name = "dtpsessao";
             this.dtpsessao.Size = new System.Drawing.Size(200, 23);
             this.dtpsessao.TabIndex = 7;
             // 
             // tbnome
             // 
-            this.tbnome.Location = new System.Drawing.Point(123, 93);
+            this.tbnome.Location = new System.Drawing.Point(154, 93);
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(200, 23);
             this.tbnome.TabIndex = 8;
@@ -153,7 +160,7 @@
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(239, 348);
+            this.btnguardar.Location = new System.Drawing.Point(239, 369);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(75, 23);
             this.btnguardar.TabIndex = 13;
@@ -162,7 +169,7 @@
             // 
             // btncancelar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(360, 348);
+            this.btncancelar.Location = new System.Drawing.Point(337, 369);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(75, 23);
             this.btncancelar.TabIndex = 14;
@@ -174,6 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::AdminGrpc.Properties.Resources.sessao;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnguardar);

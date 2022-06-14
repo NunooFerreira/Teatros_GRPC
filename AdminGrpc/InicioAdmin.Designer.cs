@@ -73,6 +73,7 @@
             this.btnlistarespetaculos.TabIndex = 3;
             this.btnlistarespetaculos.Text = "Listar Espetáculos";
             this.btnlistarespetaculos.UseVisualStyleBackColor = true;
+            this.btnlistarespetaculos.Click += new System.EventHandler(this.btnlistarespetaculos_Click);
             // 
             // btnlistarbilhetes
             // 
@@ -82,6 +83,7 @@
             this.btnlistarbilhetes.TabIndex = 4;
             this.btnlistarbilhetes.Text = "Listar Bilhetes";
             this.btnlistarbilhetes.UseVisualStyleBackColor = true;
+            this.btnlistarbilhetes.Click += new System.EventHandler(this.btnlistarbilhetes_Click);
             // 
             // btnsair
             // 
@@ -91,6 +93,7 @@
             this.btnsair.TabIndex = 5;
             this.btnsair.Text = "Sair";
             this.btnsair.UseVisualStyleBackColor = true;
+            this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
             // 
             // InicioAdmin
             // 

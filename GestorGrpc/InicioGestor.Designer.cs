@@ -36,7 +36,7 @@
             // 
             // btnAdicionarT
             // 
-            this.btnAdicionarT.Location = new System.Drawing.Point(213, 88);
+            this.btnAdicionarT.Location = new System.Drawing.Point(303, 106);
             this.btnAdicionarT.Name = "btnAdicionarT";
             this.btnAdicionarT.Size = new System.Drawing.Size(216, 40);
             this.btnAdicionarT.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // btnAdicionarS
             // 
-            this.btnAdicionarS.Location = new System.Drawing.Point(213, 158);
+            this.btnAdicionarS.Location = new System.Drawing.Point(303, 176);
             this.btnAdicionarS.Name = "btnAdicionarS";
             this.btnAdicionarS.Size = new System.Drawing.Size(216, 40);
             this.btnAdicionarS.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(261, 291);
+            this.btnSair.Location = new System.Drawing.Point(351, 309);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(111, 40);
             this.btnSair.TabIndex = 4;
@@ -66,7 +66,7 @@
             // 
             // btnAdicionarE
             // 
-            this.btnAdicionarE.Location = new System.Drawing.Point(213, 228);
+            this.btnAdicionarE.Location = new System.Drawing.Point(303, 246);
             this.btnAdicionarE.Name = "btnAdicionarE";
             this.btnAdicionarE.Size = new System.Drawing.Size(216, 40);
             this.btnAdicionarE.TabIndex = 5;
@@ -78,7 +78,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 434);
+            this.BackgroundImage = global::GestorGrpc.Properties.Resources.sistemasdistribuidos;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAdicionarE);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAdicionarS);

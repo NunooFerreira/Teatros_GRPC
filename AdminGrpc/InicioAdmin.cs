@@ -29,5 +29,22 @@ namespace AdminGrpc
             ListarS listarS = new ListarS();
             listarS.ShowDialog();
         }
+
+        private void btnlistarespetaculos_Click(object sender, EventArgs e)
+        {
+            ListarE listarE = new ListarE();
+            listarE.ShowDialog();
+        }
+
+        private void btnlistarbilhetes_Click(object sender, EventArgs e)
+        {
+            ListarB listarB = new ListarB();
+            listarB.ShowDialog();
+        }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

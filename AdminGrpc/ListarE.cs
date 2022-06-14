@@ -16,5 +16,16 @@ namespace AdminGrpc
         {
             InitializeComponent();
         }
+
+        private void btnadicionar_Click(object sender, EventArgs e)
+        {
+            AdicionarE adicionarE = new AdicionarE();
+            adicionarE.ShowDialog();
+        }
+
+        private void btnvoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
