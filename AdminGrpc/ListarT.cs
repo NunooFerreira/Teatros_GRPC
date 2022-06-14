@@ -22,13 +22,12 @@ namespace AdminGrpc
         public ListarT()
         {
            InitializeComponent();
-           ListarTeatros_Load();
+           CarregaListaTeatros();
         }
         
-        private async void ListarTeatros_Load()
-        {  // primeiro criamos a ligação, canal.
+        private async void CarregaListaTeatros()
+        {  
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
-
 
             var listaClient = new ListarTeatros.ListarTeatrosClient(channel);
 

@@ -25,19 +25,19 @@ namespace Sistema_de_reserva_bilhetes.Services
         public override async Task GetListarEspetaculo(ListarEspetaculoVerModelo request,
            IServerStreamWriter<ListarEspetaculoModelo> responseStream, ServerCallContext context)
         {
-            var teat = new ListarEspetaculoModelo();
+            var teatro = new ListarEspetaculoModelo();
             foreach (var i in _context.Espetaculos)
             {
 
-                teat.Nome = i.Nome;
-                teat.DataInicio = Convert.ToString(i.DataInicio);
-                teat.DataFim = Convert.ToString(i.DataFim);
-                teat.Money = Convert.ToDouble(i.Preco);
-                teat.Sinopse = i.Sinopse;
+                teatro.Nome = i.Nome;
+                teatro.DataInicio = Convert.ToString(i.DataInicio);
+                teatro.DataFim = Convert.ToString(i.DataFim);
+                teatro.Money = Convert.ToDouble(i.Preco);
+                teatro.Sinopse = i.Sinopse;
 
 
                 await Task.Delay(1000);
-                await responseStream.WriteAsync(teat);
+                await responseStream.WriteAsync(teatro);
 
 
             }
