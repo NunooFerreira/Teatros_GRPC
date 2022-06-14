@@ -21,5 +21,20 @@ namespace ClienteGrpc
         {
             this.Close();
         }
+
+        private void btnadicionar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+
+                float num1 = Convert.ToSingle(tbvalor.Text);
+                labeltotal.Text = (num1).ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Enter only numeric values");
+            }
+        }
     }
 }
