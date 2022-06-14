@@ -57,6 +57,7 @@
             this.btnadicionarfundos.TabIndex = 1;
             this.btnadicionarfundos.Text = "Adicionar Fundos";
             this.btnadicionarfundos.UseVisualStyleBackColor = true;
+            this.btnadicionarfundos.Click += new System.EventHandler(this.btnadicionarfundos_Click);
             // 
             // btnbilhetescomprados
             // 

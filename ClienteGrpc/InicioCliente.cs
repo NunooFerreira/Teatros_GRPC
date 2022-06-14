@@ -22,5 +22,11 @@ namespace ClienteGrpc
             VerB verB = new VerB();
             verB.ShowDialog();
         }
+
+        private void btnadicionarfundos_Click(object sender, EventArgs e)
+        {
+            AdicionarF adicionarF = new AdicionarF();
+            adicionarF.ShowDialog();
+        }
     }
 }
