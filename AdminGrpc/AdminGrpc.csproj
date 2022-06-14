@@ -19,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Protobuf Include="..\Sistema de reserva bilhetes\Protos\AdicionarTeatro.proto" GrpcServices="Client">
+      <Link>Protos\AdicionarTeatro.proto</Link>
+    </Protobuf>
     <Protobuf Include="..\Sistema de reserva bilhetes\Protos\AnularCompra.proto" GrpcServices="Client">
       <Link>Protos\AnularCompra.proto</Link>
     </Protobuf>

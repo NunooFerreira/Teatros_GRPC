@@ -24,9 +24,6 @@ namespace Sistema_de_reserva_bilhetes.Services
         public override Task<SessaoModelo> GetNovaSessao(SessaoVerModelo request, ServerCallContext context)
         {
 
-
-       
-
             var sess = new Sessao
             {
                 DataSessao = Convert.ToDateTime(request.DataSessao),
