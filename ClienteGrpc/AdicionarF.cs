@@ -27,7 +27,6 @@ namespace ClienteGrpc
             try
             {
                 
-
                 float num1 = Convert.ToSingle(tbvalor.Text);
                 labeltotal.Text = (num1).ToString();
             }
