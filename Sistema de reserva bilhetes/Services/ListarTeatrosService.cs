@@ -26,17 +26,17 @@ namespace Sistema_de_reserva_bilhetes.Services
         {
             bool flag = true;
             string nome = Convert.ToString(request.Teatro);
-            ListarTeatrosModelo teat = new ListarTeatrosModelo();
+            ListarTeatrosModelo teatro = new ListarTeatrosModelo();
             foreach (var i in _context.Teatros)
             {
                 if (nome == i.NomeTeatro)
                 {
-                    teat.Nome = i.NomeTeatro;
-                    teat.MoradaTeatro = i.MoradaTeatro;
-                    teat.LocalizacaoTeatro = i.Localizacao;
-                    teat.Telefone = i.Telefone;
-                    teat.Telemovel = i.Telemovel;
-                    teat.Email = i.Email;
+                    teatro.Nome = i.NomeTeatro;
+                    teatro.MoradaTeatro = i.MoradaTeatro;
+                    teatro.LocalizacaoTeatro = i.Localizacao;
+                    teatro.Telefone = i.Telefone;
+                    teatro.Telemovel = i.Telemovel;
+                    teatro.Email = i.Email;
                     flag = false;
 
                 }
@@ -44,12 +44,12 @@ namespace Sistema_de_reserva_bilhetes.Services
 
             if (flag == false)
             {
-                return await Task.FromResult(teat);
+                return await Task.FromResult(teatro);
             }
             else
             {
-                teat.Nome = "Não Encontrado";
-                return await Task.FromResult(teat);
+                teatro.Nome = "Não Encontrado";
+                return await Task.FromResult(teatro);
             }
 
 
