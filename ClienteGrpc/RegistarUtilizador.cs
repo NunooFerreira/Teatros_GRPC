@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Grpc.Net.Client;
+using Sistema_de_reserva_bilhetes;
 
 namespace ClienteGrpc
 {
@@ -26,31 +28,33 @@ namespace ClienteGrpc
             this.Close();
         }
 
-        private void btnadicionar_Click(object sender, EventArgs e)
+        private async void btnadicionar_Click(object sender, EventArgs e)
         {
-            /*
-            if(txbusername.Text == "" || txbpassword.Text == "")
+            var channel = GrpcChannel.ForAddress("https://localhost:5001/%22);
+
+            var utiClient = new CriarUtilizador.CriarUtilizadorClient(channel);
+
+            // vai ser atribuida as variaveis do proto os valores das textboxes preenchidas, guardadas numa variavel do tipo AddUtiLookupModel
+            var clienteRequest = new UtilizadorVerModelo
             {
-                MessageBox.Show("Por favor preencha os campos necessarios!");
+                Username = txbusername.Text,
+                Pass = txbpassword.Text,
+                Nome = txbnome.Text,
+                Nif = txbnif.Text,
+                Idade = Convert.ToInt32(txbidade.Text),
+                Localidade = txblocalidade.Text
+
+            };
+
+            // É chamado o metodo do proto para comunicar com o servidor, enviar os dados e receber a resposta na variavel feedback
+            var feedback = await utiClient.GetUtilizadorInfoAsync(clienteRequest);
+            var message = MessageBox.Show(feedback.Feedback, "Adicionar Utilizador", MessageBoxButtons.OK);
+            if (message == DialogResult.OK)
+            {
+                this.Close();
             }
 
-          using(SqlConnection sqlCon = new SqlConnection(connectionStraing))
-            {
-                sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand("UserAdd",sqlCon);
-                sqlCmd.CommandType = CommandType.StoredProcedure;
-                sqlCmd.Parameters.AddwithValue("@Nome", txbnome.Text.Trim());
-                sqlCmd.Parameters.AddwithValue("@Idade", txbidade.Text.Trim());
-                sqlCmd.Parameters.AddwithValue("@Username", txbusername.Text.Trim());
-                sqlCmd.Parameters.AddwithValue("@Password", txbpassword.Text.Trim());
-                sqlCmd.Parameters.AddwithValue("@Nif", txbnif.Text.Trim());
-                sqlCmd.Parameters.AddwithValue("@Localidade", txblocalidade.Text.Trim());
-                sqlCmd.ExecuteNonQuery();
-                MessageBox.Show("Registo feito com sucesso!");
 
-                Clear();
-            }
-            */
         }
         void Clear()
         {

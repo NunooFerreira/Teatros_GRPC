@@ -12,7 +12,6 @@ namespace Sistema_de_reserva_bilhetes.Services
     {
         private readonly ILogger<UtilizadorService> _logger;
         private readonly BaseTeatrosContext _context;
-
         public UtilizadorService(ILogger<UtilizadorService> logger, BaseTeatrosContext dbcontext)
         {
             _logger = logger;

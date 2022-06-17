@@ -53,5 +53,7 @@ namespace Sistema_de_reserva_bilhetes.Models
 
         [InverseProperty(nameof(ComprarBilhete.IdUtilizadorNavigation))]
         public virtual ICollection<ComprarBilhete> ComprarBilhetes { get; set; }
+
+     
     }
 }

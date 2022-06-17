@@ -33,6 +33,8 @@ namespace AdminGrpc
 
             var call = listaClient.GetListaTeatros(new ListaTeatroVerModelo());
 
+            
+
             while (await call.ResponseStream.MoveNext())
             {
                 var teatro = call.ResponseStream.Current;
