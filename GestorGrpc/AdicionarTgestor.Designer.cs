@@ -53,6 +53,7 @@
             this.btncancelar.TabIndex = 29;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnguardar
             // 
@@ -62,6 +63,7 @@
             this.btnguardar.TabIndex = 28;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // tbtelefone
             // 

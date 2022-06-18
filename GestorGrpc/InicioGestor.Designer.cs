@@ -91,6 +91,7 @@
             this.btnremoverteatro.TabIndex = 6;
             this.btnremoverteatro.Text = "Remover Teatro";
             this.btnremoverteatro.UseVisualStyleBackColor = true;
+            this.btnremoverteatro.Click += new System.EventHandler(this.btnremoverteatro_Click);
             // 
             // btnalterarsessao
             // 

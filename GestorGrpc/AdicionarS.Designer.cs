@@ -53,6 +53,7 @@
             this.btncancelar.TabIndex = 29;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnguardar
             // 
@@ -177,7 +178,7 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Adicionar Sessao";
             // 
-            // AdicionarSgestor
+            // AdicionarS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,7 +199,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AdicionarSgestor";
+            this.Name = "AdicionarS";
             this.Text = "AdicionarSgestor";
             this.ResumeLayout(false);
             this.PerformLayout();

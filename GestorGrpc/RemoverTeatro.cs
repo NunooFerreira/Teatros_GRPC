@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace GestorGrpc
 {
-    public partial class AlterarSgestor : Form
+    public partial class RemoverTeatro : Form
     {
-        public AlterarSgestor()
+        public RemoverTeatro()
         {
             InitializeComponent();
         }
 
-        private void btnvoltar_Click(object sender, EventArgs e)
+        private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

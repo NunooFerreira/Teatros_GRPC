@@ -65,6 +65,7 @@
             this.label1.Size = new System.Drawing.Size(283, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Escolha um Teatro para Alterar";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnvoltar
             // 
@@ -95,6 +96,7 @@
             this.label2.Size = new System.Drawing.Size(204, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Insira os novos dados";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tbtelefone
             // 
@@ -102,6 +104,7 @@
             this.tbtelefone.Name = "tbtelefone";
             this.tbtelefone.Size = new System.Drawing.Size(100, 23);
             this.tbtelefone.TabIndex = 39;
+            this.tbtelefone.TextChanged += new System.EventHandler(this.tbtelefone_TextChanged);
             // 
             // tbtelemovel
             // 
@@ -109,6 +112,7 @@
             this.tbtelemovel.Name = "tbtelemovel";
             this.tbtelemovel.Size = new System.Drawing.Size(100, 23);
             this.tbtelemovel.TabIndex = 38;
+            this.tbtelemovel.TextChanged += new System.EventHandler(this.tbtelemovel_TextChanged);
             // 
             // tbmorada
             // 
@@ -116,6 +120,7 @@
             this.tbmorada.Name = "tbmorada";
             this.tbmorada.Size = new System.Drawing.Size(100, 23);
             this.tbmorada.TabIndex = 37;
+            this.tbmorada.TextChanged += new System.EventHandler(this.tbmorada_TextChanged);
             // 
             // tblocal
             // 
@@ -123,6 +128,7 @@
             this.tblocal.Name = "tblocal";
             this.tblocal.Size = new System.Drawing.Size(100, 23);
             this.tblocal.TabIndex = 36;
+            this.tblocal.TextChanged += new System.EventHandler(this.tblocal_TextChanged);
             // 
             // tbemail
             // 
@@ -130,6 +136,7 @@
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(100, 23);
             this.tbemail.TabIndex = 35;
+            this.tbemail.TextChanged += new System.EventHandler(this.tbemail_TextChanged);
             // 
             // tbnome
             // 
@@ -137,6 +144,7 @@
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(100, 23);
             this.tbnome.TabIndex = 34;
+            this.tbnome.TextChanged += new System.EventHandler(this.tbnome_TextChanged);
             // 
             // label7
             // 
@@ -147,6 +155,7 @@
             this.label7.Size = new System.Drawing.Size(36, 15);
             this.label7.TabIndex = 33;
             this.label7.Text = "Email";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -157,6 +166,7 @@
             this.label6.Size = new System.Drawing.Size(51, 15);
             this.label6.TabIndex = 32;
             this.label6.Text = "Telefone";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -167,6 +177,7 @@
             this.label5.Size = new System.Drawing.Size(60, 15);
             this.label5.TabIndex = 31;
             this.label5.Text = "Telemovel";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -177,6 +188,7 @@
             this.label4.Size = new System.Drawing.Size(68, 15);
             this.label4.TabIndex = 30;
             this.label4.Text = "Localização";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -187,6 +199,7 @@
             this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 29;
             this.label3.Text = "Morada";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label8
             // 
@@ -197,6 +210,7 @@
             this.label8.Size = new System.Drawing.Size(40, 15);
             this.label8.TabIndex = 28;
             this.label8.Text = "Nome";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // AlterarTgestor
             // 

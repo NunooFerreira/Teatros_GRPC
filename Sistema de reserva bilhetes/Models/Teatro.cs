@@ -32,9 +32,9 @@ namespace Sistema_de_reserva_bilhetes.Models
         [StringLength(30)]
         public string Localizacao { get; set; }
         [Column("telemovel")]
-        public int Telemovel { get; set; }
+        public string Telemovel { get; set; }
         [Column("telefone")]
-        public int Telefone { get; set; }
+        public string Telefone { get; set; }
         [Required]
         [Column("email")]
         [StringLength(50)]

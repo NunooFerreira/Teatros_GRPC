@@ -61,5 +61,11 @@ namespace GestorGrpc
             AssociarSessao associarSessao = new AssociarSessao();
             associarSessao.ShowDialog();
         }
+
+        private void btnremoverteatro_Click(object sender, EventArgs e)
+        {
+            RemoverTeatro removerTeatro = new RemoverTeatro();
+            removerTeatro.ShowDialog();
+        }
     }
 }

@@ -19,7 +19,7 @@ message ListarTeatrosModelo{
 	string nome = 1;
 	string morada_teatro = 2;
 	string localizacao_teatro = 3;
-	int32 telemovel = 4;
-	int32 telefone = 5;
+	string telemovel = 4;
+	string telefone = 5;
 	string email = 6;
 }

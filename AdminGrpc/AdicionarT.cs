@@ -36,8 +36,8 @@ namespace AdminGrpc
                 Nome = tbnome.Text,
                 MoradaTeatro = tbmorada.Text,
                 LocalizacaoTeatro = tblocal.Text,
-                Telemovel = Convert.ToInt32(tbtelemovel.Text),
-                Telefone = Convert.ToInt32(tbtelefone.Text),
+                Telemovel = tbtelemovel.Text,
+                Telefone =  tbtelefone.Text,
                 Email = tbemail.Text
             };
             var reply = await client.GetNewTeatroAsync(input);

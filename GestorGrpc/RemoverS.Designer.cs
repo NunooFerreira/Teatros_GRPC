@@ -45,6 +45,7 @@
             this.label1.Size = new System.Drawing.Size(155, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "Remover Sessao";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbremoverSessao
             // 
@@ -53,6 +54,7 @@
             this.cmbremoverSessao.Name = "cmbremoverSessao";
             this.cmbremoverSessao.Size = new System.Drawing.Size(321, 23);
             this.cmbremoverSessao.TabIndex = 15;
+            this.cmbremoverSessao.SelectedIndexChanged += new System.EventHandler(this.cmbremoverSessao_SelectedIndexChanged);
             // 
             // btnremover
             // 
@@ -62,6 +64,7 @@
             this.btnremover.TabIndex = 16;
             this.btnremover.Text = "Remover";
             this.btnremover.UseVisualStyleBackColor = true;
+            this.btnremover.Click += new System.EventHandler(this.btnremover_Click);
             // 
             // btncancelar
             // 
@@ -85,6 +88,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RemoverS";
             this.Text = "AdicionarEgestor";
+            this.Load += new System.EventHandler(this.RemoverS_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

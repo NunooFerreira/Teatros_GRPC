@@ -21,11 +21,7 @@ namespace Sistema_de_reserva_bilhetes.Services
             _logger = logger;
             _context = context;
         }
-        public AdicionarTeatroService(BaseTeatrosContext dbcontext)
-        {
-            _context = dbcontext;
-        }
-
+   
         public async override Task<TeatroModelo> GetNewTeatro(TeatroVerModelo request, ServerCallContext context)
         {
             var teatro = new Teatro
@@ -43,7 +39,7 @@ namespace Sistema_de_reserva_bilhetes.Services
 
             return await Task.FromResult(new TeatroModelo
             {
-                Feedback = "Teatro adicionado com Sucesso! " + request.Nome + " " + request.Email
+                Feedback = "Teatro adicionado com Sucesso! " + request.Nome + " " 
             });
         }
 
