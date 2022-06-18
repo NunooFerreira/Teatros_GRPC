@@ -48,7 +48,7 @@ namespace Sistema_de_reserva_bilhetes.Models
         [StringLength(150)]
         public string Movimentos { get; set; }
 
-        [Column("id_tipo_utilizador")]
+        [Column("tipoutilizador")]
         public int? Tipoutilizador { get; set; }
 
         [InverseProperty(nameof(ComprarBilhete.IdUtilizadorNavigation))]

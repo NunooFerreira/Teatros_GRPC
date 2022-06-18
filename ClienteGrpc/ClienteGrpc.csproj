@@ -8,9 +8,39 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Sistema de reserva bilhetes\**" />
+    <EmbeddedResource Remove="Sistema de reserva bilhetes\**" />
+    <None Remove="Sistema de reserva bilhetes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Protos\AdicionarTeatro.proto" />
+    <None Remove="Protos\AdicionarUtilizador.proto" />
+    <None Remove="Protos\AnularCompra.proto" />
+    <None Remove="Protos\CarregarRegisto.proto" />
+    <None Remove="Protos\Clientes.proto" />
+    <None Remove="Protos\Compra.proto" />
+    <None Remove="Protos\Espetaculo.proto" />
+    <None Remove="Protos\Fundos.proto" />
+    <None Remove="Protos\greet.proto" />
+    <None Remove="Protos\ListarCompraBilhete.proto" />
+    <None Remove="Protos\ListarEspetaculo.proto" />
+    <None Remove="Protos\ListarReserva.proto" />
+    <None Remove="Protos\ListarSessao.proto" />
+    <None Remove="Protos\ListarTeatros.proto" />
+    <None Remove="Protos\ListarUtilizadores.proto" />
+    <None Remove="Protos\Login.proto" />
+    <None Remove="Protos\RegistaEspetaculo.proto" />
+    <None Remove="Protos\Reserva.proto" />
+    <None Remove="Protos\Sessao.proto" />
+    <None Remove="Protos\TipoUtilizador.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.21.1" />
     <PackageReference Include="Grpc.Core" Version="2.46.3" />
     <PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.40.0" />
     <PackageReference Include="Grpc.Tools" Version="2.46.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -27,26 +57,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\Login.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\AdicionarTeatro.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\Espetaculo.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\Sessao.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\RegistaEspetaculo.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\Compra.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\TipoUtilizador.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\Utilizador.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\Reserva.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\Fundos.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\AnularCompra.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\CarregarRegisto.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\Clientes.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\ListarUtilizadores.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\ListarTeatros.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\ListarSessao.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\ListarReserva.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\ListarEspetaculo.proto" GrpcServices="Client" />
-    <Protobuf Include="Protos\ListarCompraBilhete.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\AdicionarTeatro.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\AdicionarUtilizador.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\AnularCompra.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\CarregarRegisto.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\Clientes.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\Compra.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\Espetaculo.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\Fundos.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\greet.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\ListarCompraBilhete.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\ListarEspetaculo.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\ListarReserva.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\ListarSessao.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\ListarTeatros.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\ListarUtilizadores.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\Login.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\RegistaEspetaculo.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\Reserva.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\Sessao.proto" GrpcServices="Cliente" />
+    <Protobuf Include="Protos\TipoUtilizador.proto" GrpcServices="Cliente" />
   </ItemGroup>
 
   <ItemGroup>

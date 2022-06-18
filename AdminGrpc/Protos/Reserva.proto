@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+
+service AdicionarReserva {
+	rpc GetNovaReserva (ReservaVerModelo) returns (ReservaModelo);
+}
+
+message	ReservaVerModelo{
+	string teatro = 1;
+	string Sessao = 2;
+	string Espetaculo = 3;
+	int32 quantidade = 4;
+	google.protobuf.Timestamp data_reserva = 5;
+
+}
+
+message ReservaModelo{
+	string feedback = 1;
+	int32 money = 2;
+	string referencia = 3;
+}

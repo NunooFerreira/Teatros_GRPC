@@ -38,6 +38,8 @@ namespace AdminGrpc
             };
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new AdicionarTeatro.AdicionarTeatroClient(channel);
+            var artur = new AdicionarUtilizador.AdicionarUtilizadorClient(channel);
+
 
             var reply = await client.GetNewTeatroAsync(input);
             var rep = MessageBox.Show(reply.Feedback, "Adicionar Teatro", MessageBoxButtons.OK);

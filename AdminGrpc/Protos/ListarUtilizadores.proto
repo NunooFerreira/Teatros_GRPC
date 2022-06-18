@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+service ListarUtilizadores {
+	rpc GetListaUtilizadores (ListarUtilizadoresVerModelo) returns (stream ListarUtilizadoresModelo);
+}
+
+message ListarUtilizadoresVerModelo{
+
+}
+
+message ListarUtilizadoresModelo{
+	string username = 1;
+	string pass = 2;
+	string nome = 3;
+	string nif = 4;
+	int32 idade = 5;
+	string localidade = 6;
+	string tipo_uti = 7; 
+
+}
+

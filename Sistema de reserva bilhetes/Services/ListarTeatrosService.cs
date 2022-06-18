@@ -69,6 +69,7 @@ namespace Sistema_de_reserva_bilhetes.Services
                     Email = _teatro.Email,
                     LocalizacaoTeatro = _teatro.Localizacao,
                     Nome = _teatro.NomeTeatro,
+                    Telemovel = _teatro.Telemovel,
                     Telefone = _teatro.Telefone,
                     MoradaTeatro = _teatro.MoradaTeatro
                 });

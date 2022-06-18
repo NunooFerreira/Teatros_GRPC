@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+service AdicionarRegisto{
+	rpc GetCarregarRegistoInfo (CarregarRegistoVerModelo) returns (CarregarRegistoModelo);
+	rpc GetNovosRegistos(RegistoRequest) returns (stream CarregarRegistoModelo);
+}
+
+message RegistoRequest{
+
+}
+
+message CarregarRegistoVerModelo{
+	int32 userId = 1;
+}
+
+
+message CarregarRegistoModelo{
+	string teatro = 1;
+	string sessao = 2;
+	string espetaculo = 3;
+
+}

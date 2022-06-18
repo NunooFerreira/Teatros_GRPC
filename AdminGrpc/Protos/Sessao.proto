@@ -1,0 +1,44 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+service AdicionarSessao {
+
+	rpc GetNovaSessao (SessaoVerModelo) returns (SessaoModelo);
+	rpc UpdateSessao (SessaoVerModeloUpdate) returns (SessaoModeloUpdate);
+	rpc PesquisaSessao (SessaoVerModeloPesquisa) returns (SessaoModeloPesquisa);
+}
+
+message SessaoVerModelo{
+	string data_sessao = 1;
+	string nome_sessao = 2;
+	string hora_inicio = 3;
+	string hora_fim = 4;
+	int32 lugar_total = 5;
+	int32 lugar_disponivel = 6;
+}
+
+message SessaoModelo{
+	string feedback = 1;
+}
+ 
+message SessaoVerModeloUpdate{
+	string nome_sessao = 1;	
+}
+
+message SessaoModeloUpdate{
+	string feedback = 1;
+}
+
+message SessaoVerModeloPesquisa{	
+	string nome_sessao = 1;	
+}
+
+message SessaoModeloPesquisa{
+	string data_sessao = 1;
+	string nome_sessao = 2;
+	string hora_inicio = 3;
+	string hora_fim = 4;
+	int32 lugar_total = 5;
+	int32 lugar_disponivel = 6;
+}

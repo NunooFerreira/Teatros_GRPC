@@ -1,0 +1,20 @@
+﻿
+syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+
+package greet;
+
+service TipoUtilizador{
+	rpc GetTipoInformacao (TipoVerModelo) returns (TipoModelo);
+	
+}
+
+message TipoVerModelo{
+	string tipoUti = 1;
+}
+
+
+message TipoModelo{
+	string confirma = 1;
+	
+}

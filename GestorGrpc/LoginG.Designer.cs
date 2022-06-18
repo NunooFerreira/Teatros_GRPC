@@ -1,6 +1,6 @@
 ﻿namespace GestorGrpc
 {
-    partial class Login
+    partial class LoginG
     {
         /// <summary>
         /// Required designer variable.

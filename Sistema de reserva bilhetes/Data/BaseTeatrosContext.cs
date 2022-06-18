@@ -140,6 +140,7 @@ namespace Sistema_de_reserva_bilhetes.Data
                         entity.Property(e => e.Username).IsUnicode(false);
 
                         entity.Property(e => e.Tipoutilizador).IsUnicode(false);
+
                     });
 
                     OnModelCreatingPartial(modelBuilder);

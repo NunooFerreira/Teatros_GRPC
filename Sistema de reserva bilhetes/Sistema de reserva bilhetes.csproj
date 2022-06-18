@@ -6,14 +6,14 @@
 
   <ItemGroup>
     <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
-    <Protobuf Include="Protos\Login.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\CriarLogin.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\AdicionarTeatro.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\Espetaculo.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\Sessao.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\RegistaEspetaculo.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\Compra.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\TipoUtilizador.proto" GrpcServices="Server" />
-    <Protobuf Include="Protos\Utilizador.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\AdicionarUtilizador.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\Reserva.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\Fundos.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\AnularCompra.proto" GrpcServices="Server" />

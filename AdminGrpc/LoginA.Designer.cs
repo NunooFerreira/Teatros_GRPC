@@ -1,6 +1,6 @@
 ﻿namespace AdminGrpc
 {
-    partial class Login
+    partial class LoginA
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbusername = new System.Windows.Forms.TextBox();
+            this.tbpassword = new System.Windows.Forms.TextBox();
             this.btnentrar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,19 +71,19 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Password:";
             // 
-            // textBox1
+            // tbusername
             // 
-            this.textBox1.Location = new System.Drawing.Point(215, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 23);
-            this.textBox1.TabIndex = 3;
+            this.tbusername.Location = new System.Drawing.Point(215, 142);
+            this.tbusername.Name = "tbusername";
+            this.tbusername.Size = new System.Drawing.Size(345, 23);
+            this.tbusername.TabIndex = 3;
             // 
-            // textBox2
+            // tbpassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(215, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(345, 23);
-            this.textBox2.TabIndex = 4;
+            this.tbpassword.Location = new System.Drawing.Point(215, 217);
+            this.tbpassword.Name = "tbpassword";
+            this.tbpassword.Size = new System.Drawing.Size(345, 23);
+            this.tbpassword.TabIndex = 4;
             // 
             // btnentrar
             // 
@@ -142,8 +142,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnentrar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbpassword);
+            this.Controls.Add(this.tbusername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -159,8 +159,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbusername;
+        private System.Windows.Forms.TextBox tbpassword;
         private System.Windows.Forms.Button btnentrar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

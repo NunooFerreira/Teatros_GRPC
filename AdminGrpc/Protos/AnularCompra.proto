@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+package greet;
+
+service AnularCompra{
+	rpc GetAnularCompra(AnularCompraVerModelo) returns (AnularCompraModelo);
+}
+
+message AnularCompraVerModelo{
+	int32 id_compar = 1;
+	string teatro = 2;
+	string sessao = 3;
+	string espect = 4;
+
+}
+
+message AnularCompraModelo{
+	string feedback = 1;
+}

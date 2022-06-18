@@ -8,11 +8,11 @@ using Sistema_de_reserva_bilhetes.Models;
 
 namespace Sistema_de_reserva_bilhetes.Services
 {
-    public class UtilizadorService: CriarUtilizador.CriarUtilizadorBase
+    public class AdicionarUtilizadorService: AdicionarUtilizador.AdicionarUtilizadorBase
     {
-        private readonly ILogger<UtilizadorService> _logger;
+        private readonly ILogger<AdicionarUtilizadorService> _logger;
         private readonly BaseTeatrosContext _context;
-        public UtilizadorService(ILogger<UtilizadorService> logger, BaseTeatrosContext dbcontext)
+        public AdicionarUtilizadorService(ILogger<AdicionarUtilizadorService> logger, BaseTeatrosContext dbcontext)
         {
             _logger = logger;
             _context = dbcontext;
@@ -33,7 +33,7 @@ namespace Sistema_de_reserva_bilhetes.Services
                 Tipoutilizador = request.Tipoutilizador
             };
             _context.Add(uti);
-            //_context.SaveChangesAsync();
+            _context.SaveChangesAsync();
             return Task.FromResult(new UtilizadorModelo
             {
                 Feedback = "Utilizador Foi Registado!"

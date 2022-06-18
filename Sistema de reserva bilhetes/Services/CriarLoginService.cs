@@ -5,14 +5,15 @@ using System.Threading.Tasks;
 using Sistema_de_reserva_bilhetes.Data;
 
 
+
 namespace Sistema_de_reserva_bilhetes.Services
 {
-    public class LoginService : CriarLogin.CriarLoginBase
+    public class CriarLoginService : CriarLogin.CriarLoginBase
     {
-        private readonly ILogger<LoginService> _logger;
+        private readonly ILogger<CriarLoginService> _logger;
         private readonly BaseTeatrosContext _context;
 
-        public LoginService(ILogger<LoginService> logger, BaseTeatrosContext dbcontext)
+        public CriarLoginService(ILogger<CriarLoginService> logger, BaseTeatrosContext dbcontext)
         {
             _logger = logger;
             _context = dbcontext;

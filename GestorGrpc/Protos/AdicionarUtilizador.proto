@@ -3,7 +3,7 @@ option csharp_namespace = "Sistema_de_reserva_bilhetes";
 
 package greet;
 
-service CriarUtilizador{
+service AdicionarUtilizador{
 	rpc GetUtilizadorInfo(UtilizadorVerModelo) returns (UtilizadorModelo);
 }
 

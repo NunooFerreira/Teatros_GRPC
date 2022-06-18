@@ -56,13 +56,13 @@ namespace Sistema_de_reserva_bilhetes
 
                 endpoints.MapGrpcService<CompraService>();
 
-                endpoints.MapGrpcService<LoginService>();
+                endpoints.MapGrpcService<CriarLoginService>();
 
                 endpoints.MapGrpcService<RegistarEspetaculoService>();
 
                 endpoints.MapGrpcService<TipoUtilizadorService>();
 
-                endpoints.MapGrpcService<UtilizadorService>();
+                endpoints.MapGrpcService<AdicionarUtilizadorService>();
 
                 endpoints.MapGrpcService<ReservaService>();
 
