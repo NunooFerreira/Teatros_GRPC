@@ -21,5 +21,11 @@ namespace GestorGrpc
         {
             this.Close();
         }
+
+        private void btnadicionarS_Click(object sender, EventArgs e)
+        {
+            AdicionarSgestor adicionarSgestor = new AdicionarSgestor();
+            adicionarSgestor.ShowDialog();
+        }
     }
 }

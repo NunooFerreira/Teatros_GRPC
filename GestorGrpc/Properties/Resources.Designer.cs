@@ -63,6 +63,16 @@ namespace GestorGrpc.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Espetaculo {
+            get {
+                object obj = ResourceManager.GetObject("Espetaculo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap espetaculolista {
             get {
                 object obj = ResourceManager.GetObject("espetaculolista", resourceCulture);
@@ -83,6 +93,16 @@ namespace GestorGrpc.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sessao {
+            get {
+                object obj = ResourceManager.GetObject("sessao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sessaolista {
             get {
                 object obj = ResourceManager.GetObject("sessaolista", resourceCulture);
@@ -96,6 +116,16 @@ namespace GestorGrpc.Properties {
         internal static System.Drawing.Bitmap sistemasdistribuidos {
             get {
                 object obj = ResourceManager.GetObject("sistemasdistribuidos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Teatros {
+            get {
+                object obj = ResourceManager.GetObject("Teatros", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -53,27 +53,5 @@ namespace AdminGrpc
             }
         }
 
-
-        /*
-            private async Task CarregaListaEspetaculos()
-        {
-            var channel = GrpcChannel.ForAddress("https://localhost:5001");
-            var listaClient = new ListarEspetaculo.ListarEspetaculoClient(channel);
-
-            using (var call = listaClient.GetListarEspetaculo(new ListarEspetaculoVerModelo()))
-            {
-                while (await call.ResponseStream.MoveNext())
-                {
-                    var currentCustomer = call.ResponseStream.Current;
-                 //   lblistare.Items.Add("Espetaculo: " + currentCustomer.Nome);
-                 //   lblistare.Items.Add("Data Inicio: " + currentCustomer.DataInicio);
-                 //   lblistare.Items.Add("Data Fim: " + currentCustomer.DataFim);
-                   // lblistare.Items.Add("Preço: " + currentCustomer.Money);
-                  //  lblistare.Items.Add("Sinopse: " + currentCustomer.Sinopse);
-                    lblistare.Items.Add("-----------------------------------");
-                }
-            }
-        }
-        */
     }
 }

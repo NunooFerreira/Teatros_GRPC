@@ -118,19 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="sessao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sessao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="espetaculolista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\espetaculolista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="registologin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\registologin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sistemasdistribuidos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sistemasdistribuidos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="espetaculolista" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\espetaculolista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Teatros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Teatros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="teatroslista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\teatroslista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sessaolista" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sessaolista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="teatroslista" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\teatroslista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Espetaculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Espetaculo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -51,6 +51,7 @@
             this.btnadicionarS.TabIndex = 1;
             this.btnadicionarS.Text = "Adicionar";
             this.btnadicionarS.UseVisualStyleBackColor = true;
+            this.btnadicionarS.Click += new System.EventHandler(this.btnadicionarS_Click);
             // 
             // btnremoverS
             // 

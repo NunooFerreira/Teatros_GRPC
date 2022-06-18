@@ -52,5 +52,11 @@ namespace GestorGrpc
             }
 
         }
+
+        private void btnadicionar_Click(object sender, EventArgs e)
+        {
+            AdicionarTgestor adicionarTgestor = new AdicionarTgestor();
+            adicionarTgestor.ShowDialog();
+        }
     }
 }
