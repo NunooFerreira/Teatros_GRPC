@@ -20,17 +20,21 @@ namespace Sistema_de_reserva_bilhetes.Models
         [Column("id_sessao")]
         public int IdSessao { get; set; }
 
-        [StringLength(30)]
+        [Column("nome_sessao"), StringLength(100)]
         public string NomeSessao { get; set; }
 
         [Column("data_sessao", TypeName = "date")]
         public DateTime DataSessao { get; set; }
+
         [Column("hora_inicio")]
         public string HoraInicio { get; set; }
+
         [Column("hora_fim")]
         public string HoraFim { get; set; }
+
         [Column("lugar_totais")]
         public int LugarTotais { get; set; }
+
         [Column("lugares_disponiveis")]
         public int LugaresDisponiveis { get; set; }
 

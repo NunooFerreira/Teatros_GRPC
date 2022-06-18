@@ -34,11 +34,12 @@
             this.btnlistarespetaculos = new System.Windows.Forms.Button();
             this.btnlistarbilhetes = new System.Windows.Forms.Button();
             this.btnsair = new System.Windows.Forms.Button();
+            this.buttonListarRegistosEspetaculos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btnlistarteatros
             // 
-            this.Btnlistarteatros.Location = new System.Drawing.Point(360, 71);
+            this.Btnlistarteatros.Location = new System.Drawing.Point(360, 4);
             this.Btnlistarteatros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btnlistarteatros.Name = "Btnlistarteatros";
             this.Btnlistarteatros.Size = new System.Drawing.Size(190, 69);
@@ -49,7 +50,7 @@
             // 
             // btnlistarsessao
             // 
-            this.btnlistarsessao.Location = new System.Drawing.Point(360, 148);
+            this.btnlistarsessao.Location = new System.Drawing.Point(360, 81);
             this.btnlistarsessao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnlistarsessao.Name = "btnlistarsessao";
             this.btnlistarsessao.Size = new System.Drawing.Size(190, 69);
@@ -65,13 +66,13 @@
             this.btnmostrarlogin.Name = "btnmostrarlogin";
             this.btnmostrarlogin.Size = new System.Drawing.Size(190, 71);
             this.btnmostrarlogin.TabIndex = 2;
-            this.btnmostrarlogin.Text = "Mostrar Login";
+            this.btnmostrarlogin.Text = "Mostar Login";
             this.btnmostrarlogin.UseVisualStyleBackColor = true;
             this.btnmostrarlogin.Click += new System.EventHandler(this.btnmostrarlogin_Click);
             // 
             // btnlistarespetaculos
             // 
-            this.btnlistarespetaculos.Location = new System.Drawing.Point(360, 231);
+            this.btnlistarespetaculos.Location = new System.Drawing.Point(360, 158);
             this.btnlistarespetaculos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnlistarespetaculos.Name = "btnlistarespetaculos";
             this.btnlistarespetaculos.Size = new System.Drawing.Size(190, 71);
@@ -82,7 +83,7 @@
             // 
             // btnlistarbilhetes
             // 
-            this.btnlistarbilhetes.Location = new System.Drawing.Point(360, 309);
+            this.btnlistarbilhetes.Location = new System.Drawing.Point(360, 316);
             this.btnlistarbilhetes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnlistarbilhetes.Name = "btnlistarbilhetes";
             this.btnlistarbilhetes.Size = new System.Drawing.Size(190, 69);
@@ -102,6 +103,17 @@
             this.btnsair.UseVisualStyleBackColor = true;
             this.btnsair.Click += new System.EventHandler(this.btnsair_Click);
             // 
+            // buttonListarRegistosEspetaculos
+            // 
+            this.buttonListarRegistosEspetaculos.Location = new System.Drawing.Point(360, 237);
+            this.buttonListarRegistosEspetaculos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonListarRegistosEspetaculos.Name = "buttonListarRegistosEspetaculos";
+            this.buttonListarRegistosEspetaculos.Size = new System.Drawing.Size(190, 71);
+            this.buttonListarRegistosEspetaculos.TabIndex = 6;
+            this.buttonListarRegistosEspetaculos.Text = "Listar Registos Espetáculos";
+            this.buttonListarRegistosEspetaculos.UseVisualStyleBackColor = true;
+            this.buttonListarRegistosEspetaculos.Click += new System.EventHandler(this.buttonListarRegistosEspetaculos_Click);
+            // 
             // InicioAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -109,6 +121,7 @@
             this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.BackgroundImage = global::AdminGrpc.Properties.Resources.sistemasdistribuidos;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.buttonListarRegistosEspetaculos);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btnlistarbilhetes);
             this.Controls.Add(this.btnlistarespetaculos);
@@ -130,5 +143,6 @@
         private System.Windows.Forms.Button btnlistarespetaculos;
         private System.Windows.Forms.Button btnlistarbilhetes;
         private System.Windows.Forms.Button btnsair;
+        private System.Windows.Forms.Button buttonListarRegistosEspetaculos;
     }
 }

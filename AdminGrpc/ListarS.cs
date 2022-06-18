@@ -35,7 +35,8 @@ namespace AdminGrpc
         private async Task CarregaListarSessao()
         {
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
-
+     
+        
             var listaClient = new ListarSessao.ListarSessaoClient(channel);
 
             using (var call = listaClient.GetListarSessao(new ListarSessaoVerModelo()))
@@ -52,6 +53,7 @@ namespace AdminGrpc
                     lbSessoes.Items.Add("---------------------------------------------- ");
                 }
             }
+                
         }
     }
 }

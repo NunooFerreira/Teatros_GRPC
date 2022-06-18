@@ -5,6 +5,19 @@ package greet;
 
 service RegistarEspetaculo {
 	rpc GetRegistarEspetaculo(RegistarEspetaculoVerModelo) returns (RegistarEspetaculoModelo);
+	rpc GetRegistoEspetaculo(GetRegistoEspetaculoRequest) returns (RegistoEspetaculo);
+	rpc GetAllRegistoEspetaculo(GetAllRegistoEspetaculoRequest) returns (stream RegistoEspetaculo);
+}
+
+message GetRegistoEspetaculoRequest {
+	int32 id = 1;
+}
+
+message RegistoEspetaculo {
+	int32 id = 1;
+	int32 sessao_id = 2;
+	int32 teatro_id = 3;
+	int32 espetaculo_id = 4;
 }
 
 message RegistarEspetaculoVerModelo{
@@ -15,4 +28,7 @@ string espect = 3;
 
 message RegistarEspetaculoModelo{
 	string feedback = 1;
+}
+
+message GetAllRegistoEspetaculoRequest {
 }

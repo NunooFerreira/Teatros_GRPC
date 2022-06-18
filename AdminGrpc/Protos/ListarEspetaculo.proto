@@ -16,4 +16,5 @@ message ListarEspetaculoModelo{
 	string data_fim = 3;
 	double money = 4;
 	string sinopse = 5;
+	int32 id = 6;
 }

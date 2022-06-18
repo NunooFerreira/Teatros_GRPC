@@ -17,6 +17,7 @@ message SessaoVerModelo{
 	string hora_fim = 4;
 	int32 lugar_total = 5;
 	int32 lugar_disponivel = 6;
+	int32 id = 7;
 }
 
 message SessaoModelo{

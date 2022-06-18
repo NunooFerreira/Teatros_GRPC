@@ -55,7 +55,7 @@ message ContatoModel
 {
 	int32 ContatoId = 1;
 	string email = 2; 
-	string telefone = 3;
+	int32 telefone = 3;
 }
 message UserModel{
 	string email = 1;

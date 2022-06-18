@@ -5,6 +5,7 @@ package greet;
 service ListarTeatros{
 	rpc GetListaTeatros(ListaTeatroVerModelo) returns (stream ListarTeatrosModelo);
 	rpc PesquisaListaTeatros(PesquisaListaTeatrosVerModelo) returns (ListarTeatrosModelo);
+	rpc GetTeatro(GetTeatroRequest) returns (ListarTeatrosModelo);
 }
 
 message PesquisaListaTeatrosVerModelo{
@@ -22,4 +23,9 @@ message ListarTeatrosModelo{
 	string telemovel = 4;
 	string telefone = 5;
 	string email = 6;
+	int32 id = 7;
+}
+
+message GetTeatroRequest {
+	int32 id = 1;
 }

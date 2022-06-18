@@ -49,8 +49,12 @@ namespace AdminGrpc
 
         private void btnmostrarlogin_Click(object sender, EventArgs e)
         {
-            ListarL listarL = new ListarL();
-            listarL.ShowDialog();
+        }
+
+        private void buttonListarRegistosEspetaculos_Click(object sender, EventArgs e)
+        {
+            ListarRegistosEspetaculos listarRegistosEspetaculos = new ListarRegistosEspetaculos();
+            listarRegistosEspetaculos.ShowDialog();
         }
     }
 }

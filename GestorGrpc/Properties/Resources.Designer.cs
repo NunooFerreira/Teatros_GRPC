@@ -93,16 +93,6 @@ namespace GestorGrpc.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap registologin__1_ {
-            get {
-                object obj = ResourceManager.GetObject("registologin (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap sessao {
             get {
                 object obj = ResourceManager.GetObject("sessao", resourceCulture);

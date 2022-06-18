@@ -6,10 +6,11 @@ using Microsoft.Extensions.Logging;
 using Sistema_de_reserva_bilhetes.Data;
 using Sistema_de_reserva_bilhetes;
 using Sistema_de_reserva_bilhetes.Models;
+using System.Linq;
 
 namespace Sistema_de_reserva_bilhetes.Services
 {
-    public class RegistarEspetaculoService: RegistarEspetaculo.RegistarEspetaculoBase
+    public class RegistarEspetaculoService : RegistarEspetaculo.RegistarEspetaculoBase
     {
         private readonly ILogger<RegistarEspetaculoService> _logger;
         private readonly BaseTeatrosContext _context;
@@ -20,9 +21,8 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context = dbcontext;
         }
 
-        public override Task<RegistarEspetaculoModelo> GetRegistarEspetaculo(RegistarEspetaculoVerModelo request, ServerCallContext context)
+        public override async Task<RegistarEspetaculoModelo> GetRegistarEspetaculo(RegistarEspetaculoVerModelo request, ServerCallContext context)
         {
-         
             var teatro = new Teatro();
             int codigoteatro = 0;
 
@@ -31,7 +31,6 @@ namespace Sistema_de_reserva_bilhetes.Services
 
             var sessao = new Sessao();
             var cod_sessao = 0;
-
 
             foreach (var i in _context.Teatros)
             {
@@ -57,19 +56,48 @@ namespace Sistema_de_reserva_bilhetes.Services
                 }
             }
 
-
             var reg = new RegistaEspetaculo
             {
                 IdSessao = cod_sessao,
                 IdTeatro = codigoteatro,
                 IdEspetaculo = cod_espetaculo,
-
             };
             _context.Add(reg);
+            await _context.SaveChangesAsync();
 
-            return Task.FromResult(new RegistarEspetaculoModelo
+            return new RegistarEspetaculoModelo
             {
                 Feedback = "Sucesso Registo do Utilizador!"
+            };
+        }
+
+        public override async Task GetAllRegistoEspetaculo(GetAllRegistoEspetaculoRequest request, IServerStreamWriter<RegistoEspetaculo> responseStream, ServerCallContext context)
+        {
+            var results = this._context.RegistaEspetaculos.AsQueryable()
+                .Select(re => new RegistoEspetaculo
+                {
+                    EspetaculoId = re.IdEspetaculo,
+                    Id = re.IdRegisto,
+                    SessaoId = re.IdSessao,
+                    TeatroId = re.IdTeatro
+                }).ToList();
+
+            foreach (var registoEspetaculo in results)
+            {
+                await responseStream.WriteAsync(registoEspetaculo);
+            }
+        }
+
+        public override Task<RegistoEspetaculo> GetRegistoEspetaculo(GetRegistoEspetaculoRequest request, ServerCallContext context)
+        {
+            var registoEspetaculo = this._context.RegistaEspetaculos.FirstOrDefault(re => re.IdRegisto == request.Id);
+
+            return Task.FromResult(new RegistoEspetaculo
+            {
+                EspetaculoId = registoEspetaculo.IdEspetaculo,
+                Id = registoEspetaculo.IdRegisto,
+                SessaoId = registoEspetaculo.IdSessao,
+                TeatroId = registoEspetaculo.IdTeatro
             });
         }
     }
