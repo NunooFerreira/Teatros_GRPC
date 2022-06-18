@@ -61,7 +61,7 @@ namespace Sistema_de_reserva_bilhetes.Services
         {
             List<ListarTeatrosModelo> teatro = new List<ListarTeatrosModelo>();
 
-            //var teat = new ListarTeatroModel();
+   
             foreach (var _teatro in _context.Teatros)
             {
                 teatro.Add(new ListarTeatrosModelo

@@ -35,8 +35,7 @@ namespace NovoCliente
 
             var clienteRequest = new FundosVerModelo
             {
-                // está por defeito pois tem que ser adicionada uma variavel global para armazenar o ID.
-                Idutil = Convert.ToInt32(1006),
+                Idutil = 1006,
                 Fundo = Convert.ToInt32(tbvalor.Text)
 
             };

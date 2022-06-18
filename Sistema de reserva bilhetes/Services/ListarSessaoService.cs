@@ -72,7 +72,7 @@ namespace Sistema_de_reserva_bilhetes.Services
                 teat.LugaresDisponiveis = i.LugaresDisponiveis;
 
 
-                //await Task.Delay(1000);
+
                 await responseStream.WriteAsync(teat);
 
 

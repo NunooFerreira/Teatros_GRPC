@@ -26,22 +26,22 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context = dbcontext;
         }
 
-        public override Task<TeatroModelo> GetNewTeatro(TeatroVerModelo request, ServerCallContext context)
+        public async override Task<TeatroModelo> GetNewTeatro(TeatroVerModelo request, ServerCallContext context)
         {
             var teatro = new Teatro
             {
                 NomeTeatro = request.Nome,
                 MoradaTeatro = request.MoradaTeatro,
                 Localizacao = request.LocalizacaoTeatro,
+                Email = request.Email,
                 Telemovel = request.Telemovel,
-                Telefone = request.Telefone,
-                Email = request.Email
+                Telefone = request.Telefone
             };
-            _context.Add(teatro);
-            _context.SaveChangesAsync();
+            _context.Teatros.Add(teatro);
+            await _context.SaveChangesAsync();
 
 
-            return Task.FromResult(new TeatroModelo
+            return await Task.FromResult(new TeatroModelo
             {
                 Feedback = "Teatro adicionado com Sucesso! " + request.Nome + " " + request.Email
             });

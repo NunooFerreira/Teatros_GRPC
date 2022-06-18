@@ -64,6 +64,7 @@
             this.btnmostrarlogin.TabIndex = 2;
             this.btnmostrarlogin.Text = "Mostar Login";
             this.btnmostrarlogin.UseVisualStyleBackColor = true;
+            this.btnmostrarlogin.Click += new System.EventHandler(this.btnmostrarlogin_Click);
             // 
             // btnlistarespetaculos
             // 

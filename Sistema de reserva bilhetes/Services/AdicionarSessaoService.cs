@@ -21,7 +21,7 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context = dbcontext;
         }
 
-        public override Task<SessaoModelo> GetNovaSessao(SessaoVerModelo request, ServerCallContext context)
+        public override async Task<SessaoModelo> GetNovaSessao(SessaoVerModelo request, ServerCallContext context)
         {
 
             var sess = new Sessao
@@ -35,9 +35,9 @@ namespace Sistema_de_reserva_bilhetes.Services
 
             };
             _context.Add(sess);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
-            return Task.FromResult(new SessaoModelo
+            return await Task.FromResult(new SessaoModelo
             {
                 Feedback = "Sessao adicionada com Sucesso!"
             });
@@ -77,7 +77,7 @@ namespace Sistema_de_reserva_bilhetes.Services
         public override Task<SessaoModeloPesquisa> PesquisaSessao(SessaoVerModeloPesquisa request, ServerCallContext context)
         {
 
-            // vai percorrer a tabela sessão e encontrar a sessão com o mesmo nome
+
             var sessao = new SessaoModeloPesquisa();
             var uti = new Sessao();
             foreach (var i in _context.Sessaos)

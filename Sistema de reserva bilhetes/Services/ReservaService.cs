@@ -54,7 +54,7 @@ namespace Sistema_de_reserva_bilhetes.Services
                 }
             }
             int cod_registo = 0;
-            // Obter o id do Registo da tabela registo
+
             foreach (var reg in _context.RegistaEspetaculos)
             {
                 if ((reg.IdSessao == cod_sessao) && (reg.IdTeatro == codigoteatro) && (reg.IdEspetaculo == cod_espetaculo))

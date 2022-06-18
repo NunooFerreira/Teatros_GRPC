@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Grpc.Net.Client;
+using Sistema_de_reserva_bilhetes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,21 +24,30 @@ namespace AdminGrpc
         {
             this.Close();
         }
-        SqlConnection sc = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BaseTeatros;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-        private void btnguardar_Click(object sender, EventArgs e)
+        private async void btnguardar_Click(object sender, EventArgs e)
         {
-           
+            var channel = GrpcChannel.ForAddress("https://localhost:5001");
+
+            var espetaculoClient = new AdicionarEspetaculo.AdicionarEspetaculoClient(channel);
+
+            var clienteRequest = new EspetaculoVerModelo
+            {
+                Nome = tbnomee.Text,
+                Sinopse = rtbsinopsee.Text,
+                DataInicio = dtpdatai.Value.ToShortDateString(),
+                DataFim = dtpdatef.Value.ToShortDateString(),
+                Dinheiro = Convert.ToInt32(tbprecoe.Text),
+            };
+
+            var feedback = await espetaculoClient.GetNovoEspetaculoAsync(clienteRequest);
+            var message = MessageBox.Show(feedback.Feedback, "Adicionar Sessão", MessageBoxButtons.OK);
+            if (message == DialogResult.OK)
+            {
+                this.Close();
+            }
 
 
-            SqlCommand sm = new SqlCommand("insert into dbo.espetaculo values('" + tbnomee.Text + "'," + tbprecoe.Text + ",'"+ dtpdatai.Value.ToShortDateString() + "','" + dtpdatef.Value.ToShortDateString() + "','" + rtbsinopsee.Text + "')", sc);
 
-            sc.Open();
-
-           sm.ExecuteNonQuery();
-
-            sc.Close();
-
-            MessageBox.Show("Espetaculo adicionado com sucesso!");
 
         }
     }

@@ -20,30 +20,33 @@ namespace AdminGrpc
         {
             InitializeComponent();
         }
-        SqlConnection sc = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BaseTeatros;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnguardar_Click(object sender, EventArgs e)
+        private async void btnguardar_Click(object sender, EventArgs e)
         {
-          
-                SqlCommand sm = new SqlCommand("insert into dbo.teatro values('" + tbnome.Text + "','" + tbmorada.Text + "','" + tblocal.Text + "'," + tbtelemovel.Text + "," + tbtelefone.Text + ",'" + tbemail.Text + "')", sc);
 
-                sc.Open();
+         
+            var channel = GrpcChannel.ForAddress("https://localhost:5001");
+            var client = new AdicionarTeatro.AdicionarTeatroClient(channel);
+            var input = new TeatroVerModelo
+            {
+                Nome = tbnome.Text,
+                MoradaTeatro = tbmorada.Text,
+                LocalizacaoTeatro = tblocal.Text,
+                Telemovel = Convert.ToInt32(tbtelemovel.Text),
+                Telefone = Convert.ToInt32(tbtelefone.Text),
+                Email = tbemail.Text
+            };
+            var reply = await client.GetNewTeatroAsync(input);
+            var rep = MessageBox.Show(reply.Feedback, "Adicionar Teatro", MessageBoxButtons.OK);
 
-                sm.ExecuteNonQuery();
-
-                sc.Close();
-
-                MessageBox.Show("Teatro Adicionado com sucesso");
-
-                ListarT listar = new ListarT();
-                listar.ShowDialog();
+            if (rep == DialogResult.OK)
+            {
                 this.Close();
-            
-
+            }
 
 
         }

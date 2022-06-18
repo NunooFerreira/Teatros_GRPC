@@ -33,8 +33,6 @@ namespace Sistema_de_reserva_bilhetes.Services
             var cod_sessao = 0;
 
 
-            // Percorre a tabela TipoUtilizador e encontrar uma correspondencia entre opção selecionada e as existentes, 
-            // e obtem o ID dessa descrição para inserir na tabela utilizador
             foreach (var i in _context.Teatros)
             {
                 if (i.NomeTeatro == request.Teatro)

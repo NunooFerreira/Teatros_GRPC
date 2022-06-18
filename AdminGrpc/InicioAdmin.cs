@@ -46,5 +46,10 @@ namespace AdminGrpc
         {
             this.Close();
         }
+
+        private void btnmostrarlogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,12 +22,8 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context = dbcontext;
         }
 
-        public override Task<EspetaculoModelo> GetNovoEspetaculo(EspetaculoVerModelo request, ServerCallContext context)
+        public async override Task<EspetaculoModelo> GetNovoEspetaculo(EspetaculoVerModelo request, ServerCallContext context)
         {
-
-
-            //DateTime timeinicio = request.DataInicio.ToDateTime();
-            //DateTime timefim = request.DataFim.ToDateTime();
             var sess = new Espetaculo
             {
                 Nome = request.Nome,
@@ -38,17 +34,16 @@ namespace Sistema_de_reserva_bilhetes.Services
 
             };
             _context.Add(sess);
-            _context.SaveChangesAsync();
-            return Task.FromResult(new EspetaculoModelo
+            await _context.SaveChangesAsync();
+            return await Task.FromResult(new EspetaculoModelo
             {
-                Feedback = "Teatro adicionado com Sucesso!"
+                Feedback = "Espetaculo adicionado com Sucesso!"
             });
         }
 
         public override Task<EspetaculoModeloPesquisa> PesquisaEspetaculo(EspetaculoVerModeloPesquisa request, ServerCallContext context)
         {
 
-            // vai percorrer a tabela sessão e encontrar a sessão com o mesmo nome
             var sess = new EspetaculoModeloPesquisa();
             var uti = new Espetaculo();
             foreach (var i in _context.Espetaculos)
