@@ -56,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(226, 29);
+            this.label2.Location = new System.Drawing.Point(227, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 21);
             this.label2.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(589, 29);
+            this.label4.Location = new System.Drawing.Point(613, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 21);
             this.label4.TabIndex = 3;
@@ -88,7 +88,7 @@
             this.lbpesquisas.ItemHeight = 15;
             this.lbpesquisas.Location = new System.Drawing.Point(182, 126);
             this.lbpesquisas.Name = "lbpesquisas";
-            this.lbpesquisas.Size = new System.Drawing.Size(511, 199);
+            this.lbpesquisas.Size = new System.Drawing.Size(535, 199);
             this.lbpesquisas.TabIndex = 7;
             // 
             // btnefetuapesquisa
@@ -124,25 +124,25 @@
             // cbteatros
             // 
             this.cbteatros.FormattingEnabled = true;
-            this.cbteatros.Location = new System.Drawing.Point(198, 63);
+            this.cbteatros.Location = new System.Drawing.Point(182, 63);
             this.cbteatros.Name = "cbteatros";
-            this.cbteatros.Size = new System.Drawing.Size(121, 23);
+            this.cbteatros.Size = new System.Drawing.Size(150, 23);
             this.cbteatros.TabIndex = 11;
             // 
             // cbespetaculos
             // 
             this.cbespetaculos.FormattingEnabled = true;
-            this.cbespetaculos.Location = new System.Drawing.Point(375, 63);
+            this.cbespetaculos.Location = new System.Drawing.Point(359, 63);
             this.cbespetaculos.Name = "cbespetaculos";
-            this.cbespetaculos.Size = new System.Drawing.Size(134, 23);
+            this.cbespetaculos.Size = new System.Drawing.Size(165, 23);
             this.cbespetaculos.TabIndex = 12;
             // 
             // cbsessao
             // 
             this.cbsessao.FormattingEnabled = true;
-            this.cbsessao.Location = new System.Drawing.Point(545, 63);
+            this.cbsessao.Location = new System.Drawing.Point(546, 63);
             this.cbsessao.Name = "cbsessao";
-            this.cbsessao.Size = new System.Drawing.Size(134, 23);
+            this.cbsessao.Size = new System.Drawing.Size(171, 23);
             this.cbsessao.TabIndex = 13;
             // 
             // PesquisarInfoCliente

@@ -19,9 +19,8 @@ namespace Sistema_de_reserva_bilhetes.Services
         }
 
 
-        public override Task<UtilizadorModelo> GetUtilizadorInfo(UtilizadorVerModelo request, ServerCallContext context)
+        public override async Task<UtilizadorModelo> GetUtilizadorInfo(UtilizadorVerModelo request, ServerCallContext context)
         {
-
             var uti = new Utilizador
             {
                 Username = request.Username,
@@ -33,8 +32,8 @@ namespace Sistema_de_reserva_bilhetes.Services
                 Tipoutilizador = request.Tipoutilizador
             };
             _context.Utilizadors.Add(uti);
-            _context.SaveChangesAsync();
-            return Task.FromResult(new UtilizadorModelo
+            await _context.SaveChangesAsync();
+            return await Task.FromResult(new UtilizadorModelo
             {
                 Feedback = "Utilizador Foi Registado!"
             });

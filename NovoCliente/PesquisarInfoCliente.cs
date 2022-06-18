@@ -1,4 +1,5 @@
-﻿using Grpc.Net.Client;
+﻿using Grpc.Core;
+using Grpc.Net.Client;
 using Sistema_de_reserva_bilhetes;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,44 @@ namespace NovoCliente
             this.Close();
         }
 
-        CarregarInformacoes();
+        private async void CarregarInformacoes()
+        {
+            var channel = GrpcChannel.ForAddress("https://localhost:5001");
+
+            var listaClient = new ListarTeatros.ListarTeatrosClient(channel);
+            var listaespet = new ListarEspetaculo.ListarEspetaculoClient(channel);
+            var listasessao = new ListarSessao.ListarSessaoClient(channel);
+
+            var call = listaClient.GetListaTeatros(new ListaTeatroVerModelo());
+
+
+            while (await call.ResponseStream.MoveNext())
+            {
+                var teatro = call.ResponseStream.Current;
+
+                cbteatros.Items.Add("* " + teatro.Nome);
+            }
+
+            using (var call1 = listaespet.GetListarEspetaculo(new ListarEspetaculoVerModelo()))
+            {
+                while (await call1.ResponseStream.MoveNext())
+                {
+                    var currentCustomer = call1.ResponseStream.Current;
+                    cbespetaculos.Items.Add("*" + currentCustomer.Nome);
+
+                }
+            }
+
+            using (var call2 = listasessao.GetListarSessao(new ListarSessaoVerModelo()))
+            {
+                while (await call2.ResponseStream.MoveNext())
+                {
+                    var currentCustomer = call2.ResponseStream.Current;
+                    cbsessao.Items.Add("Nome: " + currentCustomer.NomeSessao);
+                }
+            }
+
+        }
 
         private async void btnefetuapesquisa_Click(object sender, EventArgs e)
         {
@@ -68,7 +106,7 @@ namespace NovoCliente
 
         private void btnlimpar_Click(object sender, EventArgs e)
         {
-
+            cbteatros.SelectedIndex = -1;
 
         }
     }
