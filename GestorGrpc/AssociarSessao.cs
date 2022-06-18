@@ -1,6 +1,4 @@
-﻿using Grpc.Net.Client;
-using Sistema_de_reserva_bilhetes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestorGrpc
 {
-    public partial class RemoverS : Form
+    public partial class AssociarSessao : Form
     {
-        public RemoverS()
+        public AssociarSessao()
         {
             InitializeComponent();
         }

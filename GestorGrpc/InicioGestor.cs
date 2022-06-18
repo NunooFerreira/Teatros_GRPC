@@ -26,19 +26,17 @@ namespace GestorGrpc
 
         private void btnAdicionarT_Click(object sender, EventArgs e)
         {
-  
+           AdicionarTgestor adicionarTgestor = new AdicionarTgestor();
+           adicionarTgestor.ShowDialog();
 
         }
 
         private void btnAdicionarS_Click(object sender, EventArgs e)
         {
-
+            AdicionarS adicionarS = new AdicionarS();
+            adicionarS.ShowDialog();
         }
 
-        private void btnAdicionarE_Click(object sender, EventArgs e)
-        {
-      
-        }
 
         private void btnalterarteatro_Click(object sender, EventArgs e)
         {
@@ -50,6 +48,18 @@ namespace GestorGrpc
         {
             RemoverS removerS = new RemoverS();
             removerS.ShowDialog();
+        }
+
+        private void btnalterarsessao_Click(object sender, EventArgs e)
+        {
+            AlterarSgestor alterarSgestor = new AlterarSgestor();
+            alterarSgestor.ShowDialog();
+        }
+
+        private void btnassociarsessao_Click(object sender, EventArgs e)
+        {
+            AssociarSessao associarSessao = new AssociarSessao();
+            associarSessao.ShowDialog();
         }
     }
 }

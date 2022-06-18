@@ -100,6 +100,7 @@
             this.btnalterarsessao.TabIndex = 7;
             this.btnalterarsessao.Text = "Alterar Sessão";
             this.btnalterarsessao.UseVisualStyleBackColor = true;
+            this.btnalterarsessao.Click += new System.EventHandler(this.btnalterarsessao_Click);
             // 
             // btnremoversessao
             // 
@@ -117,8 +118,9 @@
             this.btnassociarsessao.Name = "btnassociarsessao";
             this.btnassociarsessao.Size = new System.Drawing.Size(131, 40);
             this.btnassociarsessao.TabIndex = 9;
-            this.btnassociarsessao.Text = "Remover Sessão";
+            this.btnassociarsessao.Text = "Associar Sessão";
             this.btnassociarsessao.UseVisualStyleBackColor = true;
+            this.btnassociarsessao.Click += new System.EventHandler(this.btnassociarsessao_Click);
             // 
             // label1
             // 
