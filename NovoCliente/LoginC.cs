@@ -62,5 +62,6 @@ namespace NovoCliente
             RegistarUtilizadorC registarUtilizadorC = new RegistarUtilizadorC();
             registarUtilizadorC.ShowDialog();
         }
+
     }
 }

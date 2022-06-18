@@ -94,9 +94,9 @@
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(228, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Email:";
+            this.label2.Text = "Username:";
             // 
             // label6
             // 
@@ -130,7 +130,7 @@
             this.LabelGestor.TabIndex = 17;
             this.LabelGestor.Text = "Gestor";
             // 
-            // Login
+            // LoginG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,7 +145,7 @@
             this.Controls.Add(this.tbpassword);
             this.Controls.Add(this.tbusername);
             this.Controls.Add(this.btnlogin);
-            this.Name = "Login";
+            this.Name = "LoginG";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

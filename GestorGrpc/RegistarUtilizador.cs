@@ -37,7 +37,8 @@ namespace GestorGrpc
                 Nome = txbnome.Text,
                 Nif = txbnif.Text,
                 Idade = Convert.ToInt32(txbidade.Text),
-                Localidade = txblocalidade.Text
+                Localidade = txblocalidade.Text,
+                Tipoutilizador = 2
 
             };
             // É chamado o metodo do proto para comunicar com o servidor, enviar os dados e receber a resposta na variavel feedback
