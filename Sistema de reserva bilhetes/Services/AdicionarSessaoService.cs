@@ -36,6 +36,7 @@ namespace Sistema_de_reserva_bilhetes.Services
             };
             _context.Add(sess);
             _context.SaveChangesAsync();
+
             return Task.FromResult(new SessaoModelo
             {
                 Feedback = "Sessao adicionada com Sucesso!"

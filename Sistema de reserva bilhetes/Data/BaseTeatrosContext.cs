@@ -107,6 +107,20 @@ namespace Sistema_de_reserva_bilhetes.Data
                     {
                         entity.HasKey(e => e.IdSessao)
                             .HasName("PK__sessao__D45775D416284B0B");
+
+                        entity.Property(e => e.HoraFim).IsUnicode(false);
+
+                        entity.Property(e => e.HoraInicio).IsUnicode(false);
+
+                        entity.Property(e => e.NomeSessao).IsUnicode(false);
+
+                        entity.Property(e => e.DataSessao).IsUnicode(false);
+
+                        entity.Property(e => e.LugaresDisponiveis).IsUnicode(false);
+
+                        entity.Property(e => e.LugarTotais).IsUnicode(false);
+
+
                     });
 
                     modelBuilder.Entity<Teatro>(entity =>

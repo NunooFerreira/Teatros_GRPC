@@ -28,15 +28,13 @@ namespace Sistema_de_reserva_bilhetes.Services
             var teatro = new ListarEspetaculoModelo();
             foreach (var i in _context.Espetaculos)
             {
-
                 teatro.Nome = i.Nome;
                 teatro.DataInicio = Convert.ToString(i.DataInicio);
                 teatro.DataFim = Convert.ToString(i.DataFim);
                 teatro.Money = Convert.ToDouble(i.Preco);
                 teatro.Sinopse = i.Sinopse;
 
-
-                await Task.Delay(1000);
+                await Task.Delay(10);
                 await responseStream.WriteAsync(teatro);
 
 

@@ -23,7 +23,6 @@ namespace Sistema_de_reserva_bilhetes.Services
         }
         public AdicionarTeatroService(BaseTeatrosContext dbcontext)
         {
-            //_logger = logger;
             _context = dbcontext;
         }
 

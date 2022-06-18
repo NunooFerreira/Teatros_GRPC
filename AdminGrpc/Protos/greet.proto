@@ -42,7 +42,7 @@ message EspetaculoModel
 	int32 EspetaculoID = 1;
 	string nome = 2;
 	string sinopse = 3;
-	float preco = 4;
+    int32 preco = 4;
 	google.protobuf.Timestamp data_i = 5;
 	google.protobuf.Timestamp data_f = 6;
 	int32 TeatroId = 7;

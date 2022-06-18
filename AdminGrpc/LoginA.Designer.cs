@@ -57,9 +57,10 @@
             this.label2.BackColor = System.Drawing.Color.RosyBrown;
             this.label2.Location = new System.Drawing.Point(215, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Email:";
+            this.label2.Text = "Username:";
+  
             // 
             // label3
             // 
@@ -131,7 +132,7 @@
             this.LabelAdmin.TabIndex = 18;
             this.LabelAdmin.Text = "Admin";
             // 
-            // Login
+            // LoginA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,7 +148,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Login";
+            this.Name = "LoginA";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

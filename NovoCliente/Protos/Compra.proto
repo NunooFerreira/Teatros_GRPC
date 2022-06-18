@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+
+package greet;
+
+service Compra {
+	rpc GetNovaCompra (CompraVerModelo) returns (CompraModelo);
+}
+
+message CompraVerModelo{
+	int32 idreserva = 1;
+	int32 idutilizador = 2;
+	int32 total_pagar = 3;
+	int32 referencia = 4;
+}
+
+message CompraModelo{
+	string feedback = 1;
+}

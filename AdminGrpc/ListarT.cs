@@ -25,7 +25,7 @@ namespace AdminGrpc
            CarregaListaTeatros();
         }
         
-        private async void CarregaListaTeatros()
+        public async void CarregaListaTeatros()
         {  
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
 
@@ -60,8 +60,10 @@ namespace AdminGrpc
 
         private void btnadicionarT_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AdicionarT adicionarT = new AdicionarT();
             adicionarT.ShowDialog();
+            
         }
 
         private void btnvoltar_Click_1(object sender, EventArgs e)

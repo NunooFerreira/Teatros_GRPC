@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminGrpc", "AdminGrpc\Admi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestorGrpc", "GestorGrpc\GestorGrpc.csproj", "{581903FE-EB50-47BE-A97A-E24D1378CFF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovoCliente", "NovoCliente\NovoCliente.csproj", "{6651EAED-CC03-4802-84BE-AD23FAF649B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{581903FE-EB50-47BE-A97A-E24D1378CFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{581903FE-EB50-47BE-A97A-E24D1378CFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{581903FE-EB50-47BE-A97A-E24D1378CFF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6651EAED-CC03-4802-84BE-AD23FAF649B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6651EAED-CC03-4802-84BE-AD23FAF649B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6651EAED-CC03-4802-84BE-AD23FAF649B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6651EAED-CC03-4802-84BE-AD23FAF649B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

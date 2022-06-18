@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Sistema_de_reserva_bilhetes";
+
+package greet;
+
+service RegistarEspetaculo {
+	rpc GetRegistarEspetaculo(RegistarEspetaculoVerModelo) returns (RegistarEspetaculoModelo);
+}
+
+message RegistarEspetaculoVerModelo{
+string teatro = 1;
+string sessao = 2;
+string espect = 3;
+}
+
+message RegistarEspetaculoModelo{
+	string feedback = 1;
+}
