@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbespetaculo = new System.Windows.Forms.ComboBox();
+            this.cmbteatro = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnvoltar = new System.Windows.Forms.Button();
             this.btnalterar = new System.Windows.Forms.Button();
@@ -47,14 +47,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // cmbespetaculo
+            // cmbteatro
             // 
-            this.cmbespetaculo.FormattingEnabled = true;
-            this.cmbespetaculo.Location = new System.Drawing.Point(242, 68);
-            this.cmbespetaculo.Name = "cmbespetaculo";
-            this.cmbespetaculo.Size = new System.Drawing.Size(314, 23);
-            this.cmbespetaculo.TabIndex = 7;
-            this.cmbespetaculo.SelectedIndexChanged += new System.EventHandler(this.cmbespetaculo_SelectedIndexChanged);
+            this.cmbteatro.FormattingEnabled = true;
+            this.cmbteatro.Location = new System.Drawing.Point(242, 68);
+            this.cmbteatro.Name = "cmbteatro";
+            this.cmbteatro.Size = new System.Drawing.Size(314, 23);
+            this.cmbteatro.TabIndex = 7;
             // 
             // label1
             // 
@@ -65,7 +64,6 @@
             this.label1.Size = new System.Drawing.Size(283, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Escolha um Teatro para Alterar";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnvoltar
             // 
@@ -85,7 +83,7 @@
             this.btnalterar.TabIndex = 4;
             this.btnalterar.Text = "Alterar";
             this.btnalterar.UseVisualStyleBackColor = true;
-            this.btnalterar.Click += new System.EventHandler(this.btnremover_Click);
+            this.btnalterar.Click += new System.EventHandler(this.btnalterar_Click);
             // 
             // label2
             // 
@@ -96,7 +94,6 @@
             this.label2.Size = new System.Drawing.Size(204, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "Insira os novos dados";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tbtelefone
             // 
@@ -104,7 +101,6 @@
             this.tbtelefone.Name = "tbtelefone";
             this.tbtelefone.Size = new System.Drawing.Size(100, 23);
             this.tbtelefone.TabIndex = 39;
-            this.tbtelefone.TextChanged += new System.EventHandler(this.tbtelefone_TextChanged);
             // 
             // tbtelemovel
             // 
@@ -112,7 +108,6 @@
             this.tbtelemovel.Name = "tbtelemovel";
             this.tbtelemovel.Size = new System.Drawing.Size(100, 23);
             this.tbtelemovel.TabIndex = 38;
-            this.tbtelemovel.TextChanged += new System.EventHandler(this.tbtelemovel_TextChanged);
             // 
             // tbmorada
             // 
@@ -120,7 +115,6 @@
             this.tbmorada.Name = "tbmorada";
             this.tbmorada.Size = new System.Drawing.Size(100, 23);
             this.tbmorada.TabIndex = 37;
-            this.tbmorada.TextChanged += new System.EventHandler(this.tbmorada_TextChanged);
             // 
             // tblocal
             // 
@@ -128,7 +122,6 @@
             this.tblocal.Name = "tblocal";
             this.tblocal.Size = new System.Drawing.Size(100, 23);
             this.tblocal.TabIndex = 36;
-            this.tblocal.TextChanged += new System.EventHandler(this.tblocal_TextChanged);
             // 
             // tbemail
             // 
@@ -136,7 +129,6 @@
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(100, 23);
             this.tbemail.TabIndex = 35;
-            this.tbemail.TextChanged += new System.EventHandler(this.tbemail_TextChanged);
             // 
             // tbnome
             // 
@@ -144,7 +136,6 @@
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(100, 23);
             this.tbnome.TabIndex = 34;
-            this.tbnome.TextChanged += new System.EventHandler(this.tbnome_TextChanged);
             // 
             // label7
             // 
@@ -155,7 +146,6 @@
             this.label7.Size = new System.Drawing.Size(36, 15);
             this.label7.TabIndex = 33;
             this.label7.Text = "Email";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -166,7 +156,6 @@
             this.label6.Size = new System.Drawing.Size(51, 15);
             this.label6.TabIndex = 32;
             this.label6.Text = "Telefone";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -177,7 +166,6 @@
             this.label5.Size = new System.Drawing.Size(60, 15);
             this.label5.TabIndex = 31;
             this.label5.Text = "Telemovel";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -188,7 +176,6 @@
             this.label4.Size = new System.Drawing.Size(68, 15);
             this.label4.TabIndex = 30;
             this.label4.Text = "Localização";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -199,7 +186,6 @@
             this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 29;
             this.label3.Text = "Morada";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label8
             // 
@@ -210,7 +196,6 @@
             this.label8.Size = new System.Drawing.Size(40, 15);
             this.label8.TabIndex = 28;
             this.label8.Text = "Nome";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // AlterarTgestor
             // 
@@ -231,7 +216,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbespetaculo);
+            this.Controls.Add(this.cmbteatro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnvoltar);
             this.Controls.Add(this.btnalterar);
@@ -244,7 +229,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbespetaculo;
+        private System.Windows.Forms.ComboBox cmbteatro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnvoltar;
         private System.Windows.Forms.Button btnalterar;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbremoverSessao = new System.Windows.Forms.ComboBox();
+            this.cmbremoversessao = new System.Windows.Forms.ComboBox();
             this.btnremover = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,16 +45,14 @@
             this.label1.Size = new System.Drawing.Size(155, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "Remover Sessao";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // cmbremoverSessao
+            // cmbremoversessao
             // 
-            this.cmbremoverSessao.FormattingEnabled = true;
-            this.cmbremoverSessao.Location = new System.Drawing.Point(46, 158);
-            this.cmbremoverSessao.Name = "cmbremoverSessao";
-            this.cmbremoverSessao.Size = new System.Drawing.Size(321, 23);
-            this.cmbremoverSessao.TabIndex = 15;
-            this.cmbremoverSessao.SelectedIndexChanged += new System.EventHandler(this.cmbremoverSessao_SelectedIndexChanged);
+            this.cmbremoversessao.FormattingEnabled = true;
+            this.cmbremoversessao.Location = new System.Drawing.Point(46, 158);
+            this.cmbremoversessao.Name = "cmbremoversessao";
+            this.cmbremoversessao.Size = new System.Drawing.Size(321, 23);
+            this.cmbremoversessao.TabIndex = 15;
             // 
             // btnremover
             // 
@@ -84,11 +82,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnremover);
-            this.Controls.Add(this.cmbremoverSessao);
+            this.Controls.Add(this.cmbremoversessao);
             this.Controls.Add(this.label1);
             this.Name = "RemoverS";
             this.Text = "AdicionarEgestor";
-            this.Load += new System.EventHandler(this.RemoverS_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,7 +93,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbremoverSessao;
+        private System.Windows.Forms.ComboBox cmbremoversessao;
         private System.Windows.Forms.Button btnremover;
         private System.Windows.Forms.Button btncancelar;
     }

@@ -18,13 +18,16 @@ namespace GestorGrpc
         public RemoverS()
         {
             InitializeComponent();
+            CarregarTudo();
+           
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private async void RemoverS_Load(object sender, EventArgs e)
+
+        private async void CarregarTudo()
         {
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
 
@@ -35,37 +38,24 @@ namespace GestorGrpc
                 while (await call.ResponseStream.MoveNext())
                 {
                     var currentCustomer = call.ResponseStream.Current;
-                    cmbremoverSessao.Items.Add(currentCustomer.NomeSessao);
+                    cmbremoversessao.Items.Add(currentCustomer.NomeSessao);
                 }
             }
         }
+
         private async void btnremover_Click(object sender, EventArgs e)
         {
-            int b = cmbremoverSessao.SelectedIndex;
-            string sess = cmbremoverSessao.Items[b].ToString();
-            var input = new SessaoVerModeloUpdate { NomeSessao = sess };
+            int b = cmbremoversessao.SelectedIndex;
+            var input = new SessaoVerModeloUpdate { NomeSessao = (cmbremoversessao.Items[b].ToString()) };
 
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
 
-            var regClient = new AdicionarSessao.AdicionarSessaoClient(channel);
+            var regsessao = new AdicionarSessao.AdicionarSessaoClient(channel);
 
-            //var clienteRequest = new SessaoLookupModelupdate(input);
-
-
-            var reply = await regClient.UpdateSessaoAsync(input);
+            var reply = await regsessao.UpdateSessaoAsync(input);
             MessageBox.Show(reply.Feedback, "Eliminar Sessão", MessageBoxButtons.OK);
+            cmbremoversessao.SelectedIndex = -1;
+            this.Close();
         }
-
-        private void cmbremoverSessao_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

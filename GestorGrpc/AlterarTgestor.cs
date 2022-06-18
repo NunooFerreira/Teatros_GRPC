@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Grpc.Core;
+using Grpc.Net.Client;
+using Sistema_de_reserva_bilhetes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +18,25 @@ namespace GestorGrpc
         public AlterarTgestor()
         {
             InitializeComponent();
+            CarregarInformacoes();
         }
 
-
-        private void cmbespetaculo_SelectedIndexChanged(object sender, EventArgs e)
+        private async void CarregarInformacoes()
         {
+            var channel = GrpcChannel.ForAddress("https://localhost:5001");
+
+            var listaClient = new ListarTeatros.ListarTeatrosClient(channel);
+            
+
+            var call = listaClient.GetListaTeatros(new ListaTeatroVerModelo());
+
+
+            while (await call.ResponseStream.MoveNext())
+            {
+                var teatro = call.ResponseStream.Current;
+
+                cmbteatro.Items.Add(teatro.Nome);
+            }
 
         }
 
@@ -28,77 +45,7 @@ namespace GestorGrpc
             this.Close();
         }
 
-        private void btnremover_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbtelemovel_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbmorada_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tblocal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbemail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbnome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbtelefone_TextChanged(object sender, EventArgs e)
+        private void btnalterar_Click(object sender, EventArgs e)
         {
 
         }

@@ -21,6 +21,8 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context = dbcontext;
         }
 
+    
+
         public override async Task<SessaoModelo> GetNovaSessao(SessaoVerModelo request, ServerCallContext context)
         {
 
@@ -55,7 +57,7 @@ namespace Sistema_de_reserva_bilhetes.Services
             {
                 if (i.NomeSessao == request.NomeSessao)
                 {
-                    _context.Update(i);
+                    _context.Remove(i);
                     _context.SaveChangesAsync();
                     return Task.FromResult(new SessaoModeloUpdate
                     {
@@ -104,5 +106,10 @@ namespace Sistema_de_reserva_bilhetes.Services
                 NomeSessao = "Sessão Não encontrada!"
             });
         }
+
+
+        
+
+        
     }
 }

@@ -9,6 +9,7 @@ service AdicionarSessao {
 	rpc PesquisaSessao (SessaoVerModeloPesquisa) returns (SessaoModeloPesquisa);
 }
 
+
 message SessaoVerModelo{
 	string data_sessao = 1;
 	string nome_sessao = 2;
