@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace Sistema_de_reserva_bilhetes.Services
 {
-    public class ListarEspetaculoService: ListarEspetaculo.ListarEspetaculoBase
+    public class ListarEspetaculoService : ListarEspetaculo.ListarEspetaculoBase
     {
         private readonly ILogger<ListarEspetaculoService> _logger;
         private readonly BaseTeatrosContext _context;
@@ -21,23 +21,21 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context = dbcontext;
         }
 
-
         public override async Task GetListarEspetaculo(ListarEspetaculoVerModelo request,
            IServerStreamWriter<ListarEspetaculoModelo> responseStream, ServerCallContext context)
         {
-            var teatro = new ListarEspetaculoModelo();
+            var espetaculo = new ListarEspetaculoModelo();
             foreach (var i in _context.Espetaculos)
             {
-                teatro.Nome = i.Nome;
-                teatro.DataInicio = Convert.ToString(i.DataInicio);
-                teatro.DataFim = Convert.ToString(i.DataFim);
-                teatro.Money = Convert.ToDouble(i.Preco);
-                teatro.Sinopse = i.Sinopse;
+                espetaculo.Nome = i.Nome;
+                espetaculo.DataInicio = Convert.ToString(i.DataInicio);
+                espetaculo.DataFim = Convert.ToString(i.DataFim);
+                espetaculo.Money = Convert.ToDouble(i.Preco);
+                espetaculo.Sinopse = i.Sinopse;
+                espetaculo.Id = i.IdEspetaculo;
 
                 await Task.Delay(10);
-                await responseStream.WriteAsync(teatro);
-
-
+                await responseStream.WriteAsync(espetaculo);
             }
         }
     }

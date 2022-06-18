@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
@@ -7,11 +6,11 @@ using Microsoft.Extensions.Logging;
 using Sistema_de_reserva_bilhetes.Data;
 using Sistema_de_reserva_bilhetes;
 using Sistema_de_reserva_bilhetes.Models;
-
+using System.Linq;
 
 namespace Sistema_de_reserva_bilhetes.Services
 {
-    public class AdicionarEspetaculoService: AdicionarEspetaculo.AdicionarEspetaculoBase
+    public class AdicionarEspetaculoService : AdicionarEspetaculo.AdicionarEspetaculoBase
     {
         private readonly ILogger<AdicionarEspetaculoService> _logger;
         private readonly BaseTeatrosContext _context;
@@ -22,7 +21,7 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context = dbcontext;
         }
 
-        public async override Task<EspetaculoModelo> GetNovoEspetaculo(EspetaculoVerModelo request, ServerCallContext context)
+        public override async Task<EspetaculoModelo> GetNovoEspetaculo(EspetaculoVerModelo request, ServerCallContext context)
         {
             var sess = new Espetaculo
             {
@@ -31,7 +30,6 @@ namespace Sistema_de_reserva_bilhetes.Services
                 DataInicio = Convert.ToDateTime(request.DataInicio),
                 DataFim = Convert.ToDateTime(request.DataFim),
                 Preco = request.Dinheiro
-
             };
             _context.Add(sess);
             await _context.SaveChangesAsync();
@@ -43,7 +41,6 @@ namespace Sistema_de_reserva_bilhetes.Services
 
         public override Task<EspetaculoModeloPesquisa> PesquisaEspetaculo(EspetaculoVerModeloPesquisa request, ServerCallContext context)
         {
-
             var sess = new EspetaculoModeloPesquisa();
             var uti = new Espetaculo();
             foreach (var i in _context.Espetaculos)
@@ -56,19 +53,34 @@ namespace Sistema_de_reserva_bilhetes.Services
                     sess.Dinheiro = i.Preco;
                     sess.Sinopse = i.Sinopse;
 
-
                     return Task.FromResult(sess);
-
                 }
-
             }
 
             return Task.FromResult(new EspetaculoModeloPesquisa
             {
                 Nome = "Não foi possivel remover a Sessão!"
             });
+        }
 
+        public override Task<GetEspetaculoResponse> GetEspetaculo(GetEspetaculoRequest request, ServerCallContext context)
+        {
+            var espetaculo = this._context.Espetaculos.FirstOrDefault(e => e.IdEspetaculo == request.Id);
 
+            if (espetaculo is { })
+            {
+                return Task.FromResult(new GetEspetaculoResponse
+                {
+                    DataFim = Convert.ToString(espetaculo.DataFim),
+                    DataInicio = Convert.ToString(espetaculo.DataInicio),
+                    Dinheiro = espetaculo.Preco,
+                    Sinopse = espetaculo.Sinopse,
+                    Id = espetaculo.IdEspetaculo,
+                    Nome = espetaculo.Nome
+                });
+            }
+
+            return Task.FromResult<GetEspetaculoResponse>(null);
         }
     }
 }

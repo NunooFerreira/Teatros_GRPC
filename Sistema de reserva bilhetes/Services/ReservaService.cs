@@ -8,7 +8,7 @@ using Sistema_de_reserva_bilhetes.Models;
 
 namespace Sistema_de_reserva_bilhetes.Services
 {
-    public class ReservaService: AdicionarReserva.AdicionarReservaBase
+    public class ReservaService : AdicionarReserva.AdicionarReservaBase
     {
         private readonly ILogger<ReservaService> _logger;
         private readonly BaseTeatrosContext _context;
@@ -19,7 +19,7 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context = dbcontext;
         }
 
-        public override Task<ReservaModelo> GetNovaReserva(ReservaVerModelo request, ServerCallContext context)
+        public override async Task<ReservaModelo> GetNovaReserva(ReservaVerModelo request, ServerCallContext context)
         {
             var teatro = new Teatro();
             int codigoteatro = 0;
@@ -70,11 +70,12 @@ namespace Sistema_de_reserva_bilhetes.Services
                 Quantidade = request.Quantidade
             };
             _context.Add(reserv);
-            
-            return Task.FromResult(new ReservaModelo
+            await _context.SaveChangesAsync();
+
+            return new ReservaModelo
             {
                 Feedback = "Reserva Registada"
-            });
+            };
         }
     }
 }

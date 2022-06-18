@@ -31,8 +31,8 @@ namespace NovoCliente
 
         private void btncomprarbilhetes_Click(object sender, EventArgs e)
         {
-            ComprarBCliente comprarBCliente = new ComprarBCliente();
-            comprarBCliente.ShowDialog();
+            SessoesDisponiveis sessoesDisponiveis = new SessoesDisponiveis();
+            sessoesDisponiveis.ShowDialog();
         }
 
         private void btnadicionarfundos_Click(object sender, EventArgs e)

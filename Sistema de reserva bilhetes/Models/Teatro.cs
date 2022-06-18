@@ -19,22 +19,28 @@ namespace Sistema_de_reserva_bilhetes.Models
         [Key]
         [Column("id_teatro")]
         public int IdTeatro { get; set; }
+
         [Required]
         [Column("nome_teatro")]
         [StringLength(30)]
         public string NomeTeatro { get; set; }
+
         [Required]
         [Column("morada_teatro")]
         [StringLength(50)]
         public string MoradaTeatro { get; set; }
+
         [Required]
         [Column("localizacao")]
         [StringLength(30)]
         public string Localizacao { get; set; }
+
         [Column("telemovel")]
         public string Telemovel { get; set; }
+
         [Column("telefone")]
         public string Telefone { get; set; }
+
         [Required]
         [Column("email")]
         [StringLength(50)]

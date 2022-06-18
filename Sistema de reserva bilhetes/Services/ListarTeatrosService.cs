@@ -8,10 +8,9 @@ using Sistema_de_reserva_bilhetes.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace Sistema_de_reserva_bilhetes.Services
 {
-    public class ListarTeatrosService: ListarTeatros.ListarTeatrosBase
+    public class ListarTeatrosService : ListarTeatros.ListarTeatrosBase
     {
         private readonly ILogger<ListarTeatrosService> _logger;
         private readonly BaseTeatrosContext _context;
@@ -38,7 +37,6 @@ namespace Sistema_de_reserva_bilhetes.Services
                     teatro.Telemovel = i.Telemovel;
                     teatro.Email = i.Email;
                     flag = false;
-
                 }
             }
 
@@ -51,17 +49,13 @@ namespace Sistema_de_reserva_bilhetes.Services
                 teatro.Nome = "Não Encontrado";
                 return await Task.FromResult(teatro);
             }
-
-
         }
-
 
         public override async Task GetListaTeatros(ListaTeatroVerModelo request,
            IServerStreamWriter<ListarTeatrosModelo> responseStream, ServerCallContext context)
         {
             List<ListarTeatrosModelo> teatro = new List<ListarTeatrosModelo>();
 
-   
             foreach (var _teatro in _context.Teatros)
             {
                 teatro.Add(new ListarTeatrosModelo
@@ -73,8 +67,6 @@ namespace Sistema_de_reserva_bilhetes.Services
                     Telefone = _teatro.Telefone,
                     MoradaTeatro = _teatro.MoradaTeatro
                 });
-
-
             }
 
             foreach (var xpto in teatro)
@@ -83,5 +75,25 @@ namespace Sistema_de_reserva_bilhetes.Services
             }
         }
 
+        public override Task<ListarTeatrosModelo> GetTeatro(GetTeatroRequest request, ServerCallContext context)
+        {
+            var teatro = this._context.Teatros.FirstOrDefault(t => t.IdTeatro == request.Id);
+
+            if (teatro is { })
+            {
+                return Task.FromResult(new ListarTeatrosModelo
+                {
+                    Email = teatro.Email,
+                    Id = teatro.IdTeatro,
+                    LocalizacaoTeatro = teatro.Localizacao,
+                    MoradaTeatro = teatro.MoradaTeatro,
+                    Nome = teatro.NomeTeatro,
+                    Telefone = teatro.Telefone,
+                    Telemovel = teatro.Telemovel
+                });
+            }
+
+            return Task.FromResult<ListarTeatrosModelo>(null);
+        }
     }
 }

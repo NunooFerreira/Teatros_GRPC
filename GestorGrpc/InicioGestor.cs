@@ -26,46 +26,22 @@ namespace GestorGrpc
 
         private void btnAdicionarT_Click(object sender, EventArgs e)
         {
-           AdicionarTgestor adicionarTgestor = new AdicionarTgestor();
-           adicionarTgestor.ShowDialog();
+            ListarTgestor listarTgestor = new ListarTgestor();
+            listarTgestor.ShowDialog();
+
 
         }
 
         private void btnAdicionarS_Click(object sender, EventArgs e)
         {
-            AdicionarS adicionarS = new AdicionarS();
-            adicionarS.ShowDialog();
+            ListarSgestor listarSgestor = new ListarSgestor();
+            listarSgestor.ShowDialog();
         }
 
-
-        private void btnalterarteatro_Click(object sender, EventArgs e)
+        private void btnAdicionarE_Click(object sender, EventArgs e)
         {
-            AlterarTgestor alterarTgestor = new AlterarTgestor();
-            alterarTgestor.ShowDialog();
-        }
-
-        private void btnremoversessao_Click(object sender, EventArgs e)
-        {
-            RemoverS removerS = new RemoverS();
-            removerS.ShowDialog();
-        }
-
-        private void btnalterarsessao_Click(object sender, EventArgs e)
-        {
-            AlterarSgestor alterarSgestor = new AlterarSgestor();
-            alterarSgestor.ShowDialog();
-        }
-
-        private void btnassociarsessao_Click(object sender, EventArgs e)
-        {
-            AssociarSessao associarSessao = new AssociarSessao();
-            associarSessao.ShowDialog();
-        }
-
-        private void btnremoverteatro_Click(object sender, EventArgs e)
-        {
-            RemoverTeatro removerTeatro = new RemoverTeatro();
-            removerTeatro.ShowDialog();
+            ListarEgestor listarEgestor = new ListarEgestor();
+            listarEgestor.ShowDialog();
         }
     }
 }

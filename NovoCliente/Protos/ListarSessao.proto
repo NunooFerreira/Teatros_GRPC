@@ -6,6 +6,11 @@ package greet;
 service ListarSessao{
 	rpc GetListarSessao (ListarSessaoVerModelo) returns (stream ListarSessaoModelo);
 	rpc PesquisaListaSessao(PesquisaListaSessaoVerModelo) returns (ListarSessaoModelo);
+	rpc GetSessao(GetSessaoRequest) returns (ListarSessaoModelo);
+}
+
+message GetSessaoRequest {
+	int32 id = 1;
 }
 
 message PesquisaListaSessaoVerModelo{
@@ -23,4 +28,7 @@ message ListarSessaoModelo{
 	string horafim = 4;
 	int32 lugares_totais = 5;
 	int32 lugares_disponiveis = 6;
+	int32 id = 7;
+	int32 teatro_id = 8;
+	int32 espetaculo_id = 9;
 }

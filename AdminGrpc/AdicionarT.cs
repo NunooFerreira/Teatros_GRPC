@@ -20,6 +20,7 @@ namespace AdminGrpc
         {
             InitializeComponent();
         }
+
         private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -27,8 +28,6 @@ namespace AdminGrpc
 
         private async void btnguardar_Click(object sender, EventArgs e)
         {
-
-         
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new AdicionarTeatro.AdicionarTeatroClient(channel);
             var input = new TeatroVerModelo
@@ -37,7 +36,7 @@ namespace AdminGrpc
                 MoradaTeatro = tbmorada.Text,
                 LocalizacaoTeatro = tblocal.Text,
                 Telemovel = tbtelemovel.Text,
-                Telefone =  tbtelefone.Text,
+                Telefone = tbtelefone.Text,
                 Email = tbemail.Text
             };
             var reply = await client.GetNewTeatroAsync(input);
@@ -47,8 +46,6 @@ namespace AdminGrpc
             {
                 this.Close();
             }
-
-
         }
     }
 }

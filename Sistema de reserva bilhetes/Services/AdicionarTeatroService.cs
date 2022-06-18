@@ -10,19 +10,18 @@ using Sistema_de_reserva_bilhetes.Models;
 
 namespace Sistema_de_reserva_bilhetes.Services
 {
-    public class AdicionarTeatroService: AdicionarTeatro.AdicionarTeatroBase
+    public class AdicionarTeatroService : AdicionarTeatro.AdicionarTeatroBase
     {
         private readonly ILogger<AdicionarTeatroService> _logger;
         private readonly BaseTeatrosContext _context;
-
 
         public AdicionarTeatroService(ILogger<AdicionarTeatroService> logger, BaseTeatrosContext context)
         {
             _logger = logger;
             _context = context;
         }
-   
-        public async override Task<TeatroModelo> GetNewTeatro(TeatroVerModelo request, ServerCallContext context)
+
+        public override async Task<TeatroModelo> GetNewTeatro(TeatroVerModelo request, ServerCallContext context)
         {
             var teatro = new Teatro
             {
@@ -36,10 +35,9 @@ namespace Sistema_de_reserva_bilhetes.Services
             _context.Teatros.Add(teatro);
             await _context.SaveChangesAsync();
 
-
             return await Task.FromResult(new TeatroModelo
             {
-                Feedback = "Teatro adicionado com Sucesso! " + request.Nome + " " 
+                Feedback = "Teatro adicionado com Sucesso! " + request.Nome + " " + request.Email
             });
         }
 
