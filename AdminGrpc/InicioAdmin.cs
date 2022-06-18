@@ -49,7 +49,8 @@ namespace AdminGrpc
 
         private void btnmostrarlogin_Click(object sender, EventArgs e)
         {
-
+            ListarL listarL = new ListarL();
+            listarL.ShowDialog();
         }
     }
 }

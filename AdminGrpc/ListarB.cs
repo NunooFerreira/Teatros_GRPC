@@ -24,9 +24,9 @@ namespace AdminGrpc
         {
             this.Close();
         }
+
         private async void VerBilheteLoad(object sender, EventArgs e)
         {
-
             // primeiro criamos a ligação, canal.
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
 
@@ -44,8 +44,6 @@ namespace AdminGrpc
                     lbbilhetes.Items.Add("Preço: " + currentCustomer.Datacompra);
                     lbbilhetes.Items.Add("Sinopse: " + currentCustomer.Quantidade);
                     lbbilhetes.Items.Add(" ");
-
-
                 }
             }
         }

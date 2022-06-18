@@ -44,7 +44,7 @@ namespace AdminGrpc
                 {
                     var currentCustomer = call.ResponseStream.Current;
                     lblistare.Items.Add("Espetaculo: " + currentCustomer.Nome);
-                    lblistare.Items.Add("Preço: " + currentCustomer.Sinopse);
+                    lblistare.Items.Add("Sinopse: " + currentCustomer.Sinopse);
                     lblistare.Items.Add("Data Inicio: " + currentCustomer.DataInicio);
                     lblistare.Items.Add("Data Fim: " + currentCustomer.DataFim);
                     lblistare.Items.Add("Preço: " + currentCustomer.Money);
@@ -52,6 +52,5 @@ namespace AdminGrpc
                 }
             }
         }
-
     }
 }
