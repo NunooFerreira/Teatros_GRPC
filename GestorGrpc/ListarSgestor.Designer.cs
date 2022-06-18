@@ -61,6 +61,7 @@
             this.btnremoverS.TabIndex = 2;
             this.btnremoverS.Text = "Remover";
             this.btnremoverS.UseVisualStyleBackColor = true;
+            this.btnremoverS.Click += new System.EventHandler(this.btnremoverS_Click);
             // 
             // btncancelar
             // 

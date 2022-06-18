@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GestorGrpc
 {
-    public partial class AdicionarEgestor : Form
+    public partial class AdicionarAlterarS : Form
     {
-        public AdicionarEgestor()
+        public AdicionarAlterarS()
         {
             InitializeComponent();
         }
@@ -23,18 +23,19 @@ namespace GestorGrpc
         {
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
 
-            var espetaculoClient = new AdicionarEspetaculo.AdicionarEspetaculoClient(channel);
+            var sessaoClient = new AdicionarSessao.AdicionarSessaoClient(channel);
 
-            var clienteRequest = new EspetaculoVerModelo
+            var clienteRequest = new SessaoVerModelo
             {
-                Nome = tbnomee.Text,
-                Sinopse = rtbsinopsee.Text,
-                DataInicio = dtpdatai.Value.ToShortDateString(),
-                DataFim = dtpdatef.Value.ToShortDateString(),
-                Dinheiro = Convert.ToInt32(tbprecoe.Text),
+                NomeSessao = tbnome.Text,
+                HoraInicio = tbhorai.Text,
+                HoraFim = tbhoraf.Text,
+                DataSessao = dtpsessao.Value.ToShortDateString(),
+                LugarTotal = Convert.ToInt32(tblugart.Text),
+                LugarDisponivel = Convert.ToInt32(tblugard.Text)
             };
 
-            var feedback = await espetaculoClient.GetNovoEspetaculoAsync(clienteRequest);
+            var feedback = await sessaoClient.GetNovaSessaoAsync(clienteRequest);
             var message = MessageBox.Show(feedback.Feedback, "Adicionar Sessão", MessageBoxButtons.OK);
             if (message == DialogResult.OK)
             {

@@ -24,8 +24,14 @@ namespace GestorGrpc
 
         private void btnadicionarS_Click(object sender, EventArgs e)
         {
-            AdicionarSgestor adicionarSgestor = new AdicionarSgestor();
+            AdicionarAlterarS adicionarSgestor = new AdicionarAlterarS();
             adicionarSgestor.ShowDialog();
+        }
+
+        private void btnremoverS_Click(object sender, EventArgs e)
+        {
+            AlterarSgestor alterarSgestor = new AlterarSgestor();
+            alterarSgestor.ShowDialog();
         }
     }
 }

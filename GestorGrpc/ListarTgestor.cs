@@ -55,8 +55,14 @@ namespace GestorGrpc
 
         private void btnadicionar_Click(object sender, EventArgs e)
         {
-            AdicionarTgestor adicionarTgestor = new AdicionarTgestor();
+            AdicionarAlterarT adicionarTgestor = new AdicionarAlterarT();
             adicionarTgestor.ShowDialog();
+        }
+
+        private void btnalterar_Click(object sender, EventArgs e)
+        {
+            AlterarTgestor alterarTgestor = new AlterarTgestor();
+            alterarTgestor.ShowDialog();
         }
     }
 }

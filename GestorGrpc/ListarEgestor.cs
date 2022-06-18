@@ -51,5 +51,11 @@ namespace GestorGrpc
                 }
             }
         }
+
+        private void btnalterarE_Click(object sender, EventArgs e)
+        {
+            AlterarEgestor alterarEgestor = new AlterarEgestor();
+            alterarEgestor.ShowDialog();
+        }
     }
 }
