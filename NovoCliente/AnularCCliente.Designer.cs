@@ -1,6 +1,6 @@
-﻿namespace ClienteGrpc
+﻿namespace NovoCliente
 {
-    partial class AnularC
+    partial class AnularCCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,6 @@
             this.btnvoltar.TabIndex = 1;
             this.btnvoltar.Text = "Voltar";
             this.btnvoltar.UseVisualStyleBackColor = true;
-            this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
             // 
             // listBox1
             // 
@@ -72,16 +71,17 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Cancelar Bilhete";
             // 
-            // AnularC
+            // AnularCCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::NovoCliente.Properties.Resources.adicionar_fundos;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnvoltar);
             this.Controls.Add(this.btncancelarbilhete);
-            this.Name = "AnularC";
+            this.Name = "AnularCCliente";
             this.Text = "AnularC";
             this.ResumeLayout(false);
             this.PerformLayout();

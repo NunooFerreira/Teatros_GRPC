@@ -44,7 +44,7 @@ namespace GestorGrpc
                 }
                 else
                 {
-                    MessageBox.Show("Error esta conta não pertence a um Gestor");
+                    MessageBox.Show("Erro esta conta não pertence a um Gestor");
                 }
 
             }

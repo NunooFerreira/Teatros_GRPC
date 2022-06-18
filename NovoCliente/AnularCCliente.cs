@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClienteGrpc
+namespace NovoCliente
 {
-    public partial class AnularC : Form
+    public partial class AnularCCliente : Form
     {
-        public AnularC()
+        public AnularCCliente()
         {
             InitializeComponent();
-        }
-
-        private void btnvoltar_Click(object sender, EventArgs e)
-        {
-            this.Close();   
         }
     }
 }

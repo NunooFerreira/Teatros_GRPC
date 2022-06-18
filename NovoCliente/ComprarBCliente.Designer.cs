@@ -1,6 +1,6 @@
-﻿namespace ClienteGrpc
+﻿namespace NovoCliente
 {
-    partial class PesquisarE
+    partial class ComprarBCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // PesquisarE
+            // ComprarBCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ClienteGrpc.Properties.Resources.Espetaculo;
+            this.BackgroundImage = global::NovoCliente.Properties.Resources.bilhete__1_;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "PesquisarE";
-            this.Text = "PesquisarE";
+            this.Name = "ComprarBCliente";
+            this.Text = "ComprarB";
             this.ResumeLayout(false);
 
         }

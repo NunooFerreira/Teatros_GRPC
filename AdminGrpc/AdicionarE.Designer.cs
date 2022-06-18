@@ -154,6 +154,7 @@
             // 
             // dtpdatai
             // 
+            this.dtpdatai.CustomFormat = "";
             this.dtpdatai.Location = new System.Drawing.Point(109, 173);
             this.dtpdatai.Name = "dtpdatai";
             this.dtpdatai.Size = new System.Drawing.Size(415, 23);
@@ -161,6 +162,7 @@
             // 
             // dtpdatef
             // 
+            this.dtpdatef.CustomFormat = "";
             this.dtpdatef.Location = new System.Drawing.Point(109, 219);
             this.dtpdatef.Name = "dtpdatef";
             this.dtpdatef.Size = new System.Drawing.Size(415, 23);

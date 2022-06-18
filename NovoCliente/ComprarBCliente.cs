@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClienteGrpc
+namespace NovoCliente
 {
-    public partial class ComprarB : Form
+    public partial class ComprarBCliente : Form
     {
-        public ComprarB()
+        public ComprarBCliente()
         {
             InitializeComponent();
         }

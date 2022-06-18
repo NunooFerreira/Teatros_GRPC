@@ -32,7 +32,7 @@ namespace Sistema_de_reserva_bilhetes.Services
                 Localidade = request.Localidade,
                 Tipoutilizador = request.Tipoutilizador
             };
-            _context.Add(uti);
+            _context.Utilizadors.Add(uti);
             _context.SaveChangesAsync();
             return Task.FromResult(new UtilizadorModelo
             {

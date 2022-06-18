@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Grpc.Net.Client;
+using Sistema_de_reserva_bilhetes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,29 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using Grpc.Net.Client;
-using Sistema_de_reserva_bilhetes;
 
-namespace ClienteGrpc
+namespace NovoCliente
 {
-    public partial class RegistarUtilizador : Form
-    { 
-       // fazer a striong para ligar a base dados
-       // string connectionString = @"Data Source = (local)\sql....;";
-
-        public RegistarUtilizador()
+    public partial class RegistarUtilizadorC : Form
+    {
+        public RegistarUtilizadorC()
         {
             InitializeComponent();
         }
-
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-     
-     
 
         private void btnadicionar_Click(object sender, EventArgs e)
         {
@@ -48,7 +36,8 @@ namespace ClienteGrpc
                 Nome = txbnome.Text,
                 Nif = txbnif.Text,
                 Idade = Convert.ToInt32(txbidade.Text),
-                Localidade = txblocalidade.Text
+                Localidade = txblocalidade.Text,
+                Tipoutilizador = 3
 
             };
             // É chamado o metodo do proto para comunicar com o servidor, enviar os dados e receber a resposta na variavel feedback
@@ -58,13 +47,6 @@ namespace ClienteGrpc
             {
                 this.Close();
             }
-
-        }
-
-        void Clear()
-        {
-            txbnome.Text = txbidade.Text = txbusername.Text = txbpassword.Text = txbnif.Text = txblocalidade.Text = "";
-
         }
     }
 }

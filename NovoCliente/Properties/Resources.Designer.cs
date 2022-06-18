@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClienteGrpc.Properties {
+namespace NovoCliente.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ClienteGrpc.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClienteGrpc.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NovoCliente.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -86,16 +86,6 @@ namespace ClienteGrpc.Properties {
         internal static System.Drawing.Bitmap Espetaculo {
             get {
                 object obj = ResourceManager.GetObject("Espetaculo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap listarb {
-            get {
-                object obj = ResourceManager.GetObject("listarb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

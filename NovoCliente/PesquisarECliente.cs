@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClienteGrpc
+namespace NovoCliente
 {
-    public partial class PesquisarT : Form
+    public partial class PesquisarECliente : Form
     {
-        public PesquisarT()
+        public PesquisarECliente()
         {
             InitializeComponent();
         }

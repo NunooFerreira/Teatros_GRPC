@@ -43,7 +43,7 @@ namespace AdminGrpc
                 }
                 else
                 {
-                    MessageBox.Show("Error esta conta não pertence a um Admin");
+                    MessageBox.Show("Erro esta conta não pertence a um Admin");
                 }
 
             }

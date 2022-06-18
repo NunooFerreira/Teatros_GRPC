@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lcriarconta = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.LabelCliente = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -95,18 +95,19 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Password:";
             // 
-            // label4
+            // lcriarconta
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(328, 363);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Criar uma nova conta";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lcriarconta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lcriarconta.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lcriarconta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.lcriarconta.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lcriarconta.Location = new System.Drawing.Point(328, 363);
+            this.lcriarconta.Name = "lcriarconta";
+            this.lcriarconta.Size = new System.Drawing.Size(138, 18);
+            this.lcriarconta.TabIndex = 6;
+            this.lcriarconta.Text = "Criar uma nova conta";
+            this.lcriarconta.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lcriarconta.Click += new System.EventHandler(this.lcriarconta_Click);
             // 
             // label5
             // 
@@ -135,10 +136,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::NovoCliente.Properties.Resources.registologin;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.LabelCliente);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lcriarconta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -160,7 +162,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lcriarconta;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label LabelCliente;
     }

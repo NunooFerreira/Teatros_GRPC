@@ -1,6 +1,6 @@
-﻿namespace ClienteGrpc
+﻿namespace NovoCliente
 {
-    partial class RegistarUtilizador
+    partial class RegistarUtilizadorC
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,6 @@
             this.btncancelar.TabIndex = 50;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // txblocalidade
             // 
@@ -193,11 +192,11 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Registar  Utilizador";
             // 
-            // RegistarUtilizador
+            // RegistarUtilizadorC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ClienteGrpc.Properties.Resources.registologin;
+            this.BackgroundImage = global::NovoCliente.Properties.Resources.registologin;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnadicionar);
             this.Controls.Add(this.btncancelar);
@@ -214,7 +213,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
-            this.Name = "RegistarUtilizador";
+            this.Name = "RegistarUtilizadorC";
             this.Text = "RegistarUtilizador";
             this.ResumeLayout(false);
             this.PerformLayout();

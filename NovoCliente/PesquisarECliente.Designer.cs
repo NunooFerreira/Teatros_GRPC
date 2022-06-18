@@ -1,6 +1,6 @@
-﻿namespace ClienteGrpc
+﻿namespace NovoCliente
 {
-    partial class PesquisarT
+    partial class PesquisarECliente
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,19 @@
         {
             this.SuspendLayout();
             // 
-            // PesquisarT
+            // PesquisarECliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ClienteGrpc.Properties.Resources.Teatros;
+            this.BackgroundImage = global::NovoCliente.Properties.Resources.Espetaculo;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "PesquisarT";
-            this.Text = "PesquisarT";
+            this.Name = "PesquisarECliente";
+            this.Text = "PesquisarE";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+      
     }
 }

@@ -28,11 +28,11 @@ namespace AdminGrpc
            
 
 
-            SqlCommand sm = new SqlCommand("insert into dbo.espetaculo values('" + tbnomee.Text + "'," + tbprecoe.Text + "," + dtpdatai.Value + "," + dtpdatef.Value + ",'" + rtbsinopsee.Text + "')", sc);
+            SqlCommand sm = new SqlCommand("insert into dbo.espetaculo values('" + tbnomee.Text + "'," + tbprecoe.Text + ",'"+ dtpdatai.Value.ToShortDateString() + "','" + dtpdatef.Value.ToShortDateString() + "','" + rtbsinopsee.Text + "')", sc);
 
             sc.Open();
 
-            sm.ExecuteNonQuery();
+           sm.ExecuteNonQuery();
 
             sc.Close();
 

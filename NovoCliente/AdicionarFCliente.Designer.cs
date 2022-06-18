@@ -1,6 +1,6 @@
-﻿namespace ClienteGrpc
+﻿namespace NovoCliente
 {
-    partial class AdicionarF
+    partial class AdicionarFCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             this.btncancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.labeltotal = new System.Windows.Forms.Label();
+            this.lbcreditos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +74,6 @@
             this.btnadicionar.TabIndex = 3;
             this.btnadicionar.Text = "Adicionar";
             this.btnadicionar.UseVisualStyleBackColor = true;
-            this.btnadicionar.Click += new System.EventHandler(this.btnadicionar_Click);
             // 
             // btncancelar
             // 
@@ -83,7 +83,6 @@
             this.btncancelar.TabIndex = 4;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // label3
             // 
@@ -103,12 +102,22 @@
             this.labeltotal.Size = new System.Drawing.Size(0, 15);
             this.labeltotal.TabIndex = 6;
             // 
-            // AdicionarF
+            // lbcreditos
+            // 
+            this.lbcreditos.AutoSize = true;
+            this.lbcreditos.Location = new System.Drawing.Point(333, 128);
+            this.lbcreditos.Name = "lbcreditos";
+            this.lbcreditos.Size = new System.Drawing.Size(38, 15);
+            this.lbcreditos.TabIndex = 7;
+            this.lbcreditos.Text = "label2";
+            // 
+            // AdicionarFCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ClienteGrpc.Properties.Resources.adicionar_fundos;
+            this.BackgroundImage = global::NovoCliente.Properties.Resources.adicionar_fundos;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbcreditos);
             this.Controls.Add(this.labeltotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btncancelar);
@@ -116,7 +125,7 @@
             this.Controls.Add(this.tbvalor);
             this.Controls.Add(this.labelatuais);
             this.Controls.Add(this.label1);
-            this.Name = "AdicionarF";
+            this.Name = "AdicionarFCliente";
             this.Text = "AdicionarF";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,5 +141,6 @@
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labeltotal;
+        private System.Windows.Forms.Label lbcreditos;
     }
 }
