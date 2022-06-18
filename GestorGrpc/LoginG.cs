@@ -38,9 +38,12 @@ namespace GestorGrpc
 
                 if (reply.UtilizadorTipo == 2)
                 {
+                    
                     MessageBox.Show(reply.Feedback);
                     InicioGestor wgest = new InicioGestor();
+                    this.Hide();
                     wgest.ShowDialog();
+                   
                 }
                 else
                 {

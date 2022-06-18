@@ -22,5 +22,36 @@ namespace NovoCliente
             VerBilheteCliente verBilheteCliente = new VerBilheteCliente();
             verBilheteCliente.ShowDialog();
         }
+
+        private void btnpesquisar_Click(object sender, EventArgs e)
+        {
+            PesquisarInfoCliente pesquisarInfoCliente = new PesquisarInfoCliente();
+            pesquisarInfoCliente.ShowDialog();
+        }
+
+        private void btncomprarbilhetes_Click(object sender, EventArgs e)
+        {
+            ComprarBCliente comprarBCliente = new ComprarBCliente();
+            comprarBCliente.ShowDialog();
+        }
+
+        private void btnadicionarfundos_Click(object sender, EventArgs e)
+        {
+            AdicionarFCliente adicionarFCliente = new AdicionarFCliente();
+            adicionarFCliente.ShowDialog();
+        }
+
+        private void btnanularcompra_Click(object sender, EventArgs e)
+        {
+            AnularCCliente anularCCliente = new AnularCCliente();
+            anularCCliente.ShowDialog();
+        }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginC loginC = new LoginC();
+            loginC.ShowDialog();
+        }
     }
 }

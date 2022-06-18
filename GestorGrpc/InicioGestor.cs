@@ -19,7 +19,9 @@ namespace GestorGrpc
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            LoginG loginG = new LoginG();
+            loginG.ShowDialog();
         }
 
         private void btnAdicionarT_Click(object sender, EventArgs e)

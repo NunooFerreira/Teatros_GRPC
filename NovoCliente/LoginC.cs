@@ -39,6 +39,7 @@ namespace NovoCliente
                 {
                     MessageBox.Show(reply.Feedback);
                     InicioCliente wgest = new InicioCliente();
+                    this.Hide();
                     wgest.ShowDialog();
                 }
                 else
