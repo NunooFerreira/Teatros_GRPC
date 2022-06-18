@@ -1,6 +1,6 @@
 ﻿namespace GestorGrpc
 {
-    partial class AdicionarAlterarS
+    partial class AdicionarS
     {
         /// <summary>
         /// Required designer variable.

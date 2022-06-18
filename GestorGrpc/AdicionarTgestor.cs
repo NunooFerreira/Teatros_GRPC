@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestorGrpc
 {
-    public partial class AdicionarAlterarT : Form
+    public partial class AdicionarTgestor : Form
     {
-        public AdicionarAlterarT()
+        public AdicionarTgestor()
         {
             InitializeComponent();
         }

@@ -16,5 +16,23 @@ namespace GestorGrpc
         {
             InitializeComponent();
         }
+
+
+        private void cmbespetaculo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnvoltar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnremover_Click(object sender, EventArgs e)
+        {
+
+        }
+
+ 
     }
 }

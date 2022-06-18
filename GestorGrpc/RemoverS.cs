@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GestorGrpc
 {
-    public partial class AdicionarEgestor : Form
+    public partial class RemoverS : Form
     {
-        public AdicionarEgestor()
+        public RemoverS()
         {
             InitializeComponent();
         }

@@ -26,22 +26,30 @@ namespace GestorGrpc
 
         private void btnAdicionarT_Click(object sender, EventArgs e)
         {
-            ListarTgestor listarTgestor = new ListarTgestor();
-            listarTgestor.ShowDialog();
-
+  
 
         }
 
         private void btnAdicionarS_Click(object sender, EventArgs e)
         {
-            ListarSgestor listarSgestor = new ListarSgestor();
-            listarSgestor.ShowDialog();
+
         }
 
         private void btnAdicionarE_Click(object sender, EventArgs e)
         {
-            ListarEgestor listarEgestor = new ListarEgestor();
-            listarEgestor.ShowDialog();
+      
+        }
+
+        private void btnalterarteatro_Click(object sender, EventArgs e)
+        {
+            AlterarTgestor alterarTgestor = new AlterarTgestor();
+            alterarTgestor.ShowDialog();
+        }
+
+        private void btnremoversessao_Click(object sender, EventArgs e)
+        {
+            RemoverS removerS = new RemoverS();
+            removerS.ShowDialog();
         }
     }
 }
